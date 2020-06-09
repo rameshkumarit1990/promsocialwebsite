@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-desktop-view',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./desktop-view.component.scss']
 })
 export class DesktopViewComponent implements OnInit {
+  
+  changeview:boolean;
   desktopView: any = [{
     id: 1,
     backgroundurl:"../../assets/images/desktopimages/store-bg.jpg",
@@ -142,9 +145,12 @@ export class DesktopViewComponent implements OnInit {
     smalltext: "Organize a limo party for you and your friends."
   }];
 
-  constructor() { }
+  
+  constructor() {
+   }
 
   ngOnInit(): void {
+    
   }
 
 }

@@ -1,15 +1,15 @@
 body {
-    margin: 0;
+    margin                : 0;
     -webkit-font-smoothing: antialiased !important;
-    font-family: GothamMedium;
-    color: #fff;
+    font-family           : GothamMedium;
+    color                 : #fff;
 }
 
 @font-face {
     font-family: 'Avenir-Book';
-    src: url('./assets/fonts/Avenir-Book.ttf') format('truetype');
+    src        : url('./assets/fonts/Avenir-Book.ttf') format('truetype');
     font-weight: normal;
-    font-style: normal;
+    font-style : normal;
 }
 
 // @font-face {
@@ -21,93 +21,175 @@ body {
 
 @font-face {
     font-family: 'GothamBookRegular';
-    src: url('./assets/fonts/GothamBookRegular.otf') format('opentype');
+    src        : url('./assets/fonts/GothamBookRegular.otf') format('opentype');
     font-weight: normal;
-    font-style: normal;
+    font-style : normal;
 }
 
 @font-face {
     font-family: 'GothamMediumRegular';
-    src: url('./assets/fonts/GothamMediumRegular.ttf') format('truetype');
+    src        : url('./assets/fonts/GothamMediumRegular.ttf') format('truetype');
     font-weight: normal;
-    font-style: normal;
+    font-style : normal;
 }
 
 @font-face {
     font-family: 'BrandonGrotesqueThin';
-    src: url('./assets/fonts/brandon-grotesque-thin.otf') format('opentype');
+    src        : url('./assets/fonts/brandon-grotesque-thin.otf') format('opentype');
     font-weight: normal;
-    font-style: normal;
+    font-style : normal;
 }
 
 @font-face {
     font-family: 'BrandonGrotesqueLight';
-    src: url('./assets/fonts/brandon-grotesque-light.otf') format('opentype');
+    src        : url('./assets/fonts/brandon-grotesque-light.otf') format('opentype');
     font-weight: normal;
-    font-style: normal;
+    font-style : normal;
 }
 
 @font-face {
     font-family: 'BrandonTextLight';
-    src: url('./assets/fonts/brandon_text_light.otf') format('opentype');
+    src        : url('./assets/fonts/brandon_text_light.otf') format('opentype');
     font-weight: normal;
-    font-style: normal;
+    font-style : normal;
 }
 
 @font-face {
     font-family: 'BrandonTextThin';
-    src: url('./assets/fonts/brandon_text_thin.otf') format('opentype');
+    src        : url('./assets/fonts/brandon_text_thin.otf') format('opentype');
     font-weight: normal;
-    font-style: normal;
+    font-style : normal;
 }
 
 @font-face {
     font-family: 'GOTHAM-LIGHT';
-    src: url('./assets/fonts/GOTHAM-LIGHT.TTF') format('truetype');
+    src        : url('./assets/fonts/GOTHAM-LIGHT.TTF') format('truetype');
     font-weight: normal;
-    font-style: normal;
+    font-style : normal;
 }
 
 @font-face {
     font-family: 'GothamMedium';
-    src: url('./assets/fonts/GothamMedium.ttf') format('woff');
+    src        : url('./assets/fonts/GothamMedium.ttf') format('woff');
     font-weight: normal;
-    font-style: normal;
+    font-style : normal;
 }
-@font-face{
+
+@font-face {
     font-family: 'promsocial';
-    src: url('./assets/fonts/promsocial.ttf') format('truetype');
+    src        : url('./assets/fonts/promsocial.ttf') format('truetype');
 }
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 750px),
 (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait),
 (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .mobile-view {
+        display: block;
+    }
+
+    .desktop-view {
+        display: none;
+    }
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait),
-(min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {}
+(min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
 
-@media only screen and (min-device-width: 320px) and (max-device-height: 750px) and (orientation: landscape) {}
+    .mobile-view {
+        display: block;
+    }
 
-@media only screen and (min-device-width: 1355px) and (max-device-width: 1370px) and (min-device-height: 760px) and (max-device-height: 770px) {}
+    .desktop-view {
+        display: none;
+    }
+}
 
-@media only screen and (min-device-width: 1420px) and (max-device-width: 1440px) {}
+@media only screen and (min-device-width: 320px) and (max-device-height: 750px) and (orientation: landscape) {
 
-@media only screen and (min-device-width: 2020px) and (max-device-width: 2100px) {}
+    .mobile-view {
+        display: block;
+    }
 
-@media only screen and (min-device-width: 1260px) and (max-device-width: 1280px) {}
+    .desktop-view {
+        display: none;
+    }
+}
 
-@media screen and (min-device-width: 1880px) and (max-width: 1920px) {}
+@media only screen and (min-device-width: 1355px) and (max-device-width: 1370px) and (min-device-height: 760px) and (max-device-height: 770px) {
 
-@media only screen and (max-device-width: 2100px) and (min-device-width: 2020px) {}
+    .mobile-view {
+        display: none;
+    }
+
+    .desktop-view {
+        display: block;
+    }
+}
+
+@media only screen and (min-device-width: 1420px) and (max-device-width: 1440px) {
+
+    .mobile-view {
+        display: none;
+    }
+
+    .desktop-view {
+        display: block;
+    }
+}
+
+@media only screen and (min-device-width: 2020px) and (max-device-width: 2100px) {
+
+    .mobile-view {
+        display: none;
+    }
+
+    .desktop-view {
+        display: block;
+    }
+}
+
+@media only screen and (min-device-width: 1260px) and (max-device-width: 1280px) {
+
+    .mobile-view {
+        display: none;
+    }
+
+    .desktop-view {
+        display: block;
+    }
+}
+
+@media screen and (min-device-width: 1880px) and (max-width: 1920px) {
+
+    .mobile-view {
+        display: none;
+    }
+
+    .desktop-view {
+        display: block;
+    }
+}
+
+@media only screen and (max-device-width: 2100px) and (min-device-width: 2020px) {
+
+    .mobile-view {
+        display: none;
+    }
+
+    .desktop-view {
+        display: block;
+    }
+}
 
 
-.pink-button{
-    background: #d90081;
-    color: #fff;
+.pink-button {
+    background     : #d90081;
+    color          : #fff;
     text-decoration: none;
 }
-.blue-button{
-    background: #0c7ae5;
-    color: #fff; 
+
+.blue-button {
+    background     : #0c7ae5;
+    color          : #fff;
     text-decoration: none;
 }

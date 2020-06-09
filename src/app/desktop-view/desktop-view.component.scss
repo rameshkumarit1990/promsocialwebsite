@@ -1,10 +1,23 @@
 .first-slide-background {
     background: linear-gradient(90deg, rgba(255, 171, 27, 0.7), rgba(245, 0, 140, 0.7), rgba(95, 78, 174, 0.7)), url(../../assets/images/desktopimages/firstscreen.jpg);
+    height: 700px;
+}
+
+.desktop-button {
+    height         : 50px;
+    font-family    : GothamMedium !important;
+    width          : 200px;
+    font-size      : 12px;
+    border-radius  : 24px;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
 }
 
 .slide-view {
-    height: 100vh;
+    height: 700px;
     color : #ffffff;
+    background-size: cover;
 }
 
 .mobile-image {
@@ -48,26 +61,29 @@
     color         : #ffffff;
 
 }
-.second-slide-main-text{
+
+.second-slide-main-text {
     font-family: BrandonTextLight;
     font-weight: 900;
     margin-left: 100px !important;
-    font-size: 45px;
-    color:black;
+    font-size  : 45px;
+    color      : black;
 }
 
-.second-slide-large-text{
-    color: black;
+.second-slide-large-text {
+    color      : black;
     font-family: GothamMedium;
-    font-size: 16px;
-    margin-top: 15px;
+    font-size  : 16px;
+    margin-top : 15px;
 }
-.second-slide-small-text{
-    color: black;
+
+.second-slide-small-text {
+    color      : black;
     font-family: BrandonTextLight;
     font-weight: 600;
-    font-size: 12px;
+    font-size  : 12px;
 }
-.second-slide-images{
-    height:45px;
+
+.second-slide-images {
+    height: 45px;
 }
