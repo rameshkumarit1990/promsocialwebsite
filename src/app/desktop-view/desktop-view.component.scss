@@ -1,0 +1,73 @@
+.first-slide-background {
+    background: linear-gradient(90deg, rgba(255, 171, 27, 0.7), rgba(245, 0, 140, 0.7), rgba(95, 78, 174, 0.7)), url(../../assets/images/desktopimages/firstscreen.jpg);
+}
+
+.slide-view {
+    height: 100vh;
+    color : #ffffff;
+}
+
+.mobile-image {
+    width: 285px;
+}
+
+.left-icon-image {
+    width: 100px;
+}
+
+.right-icon-image {
+    width      : 100px;
+    margin-left: 545px;
+}
+
+.large-text {
+    font-size  : 45px;
+    margin-top : 20px;
+    font-family: BrandonTextThin;
+    color      : #ffffff;
+}
+
+.small-text {
+    font-size  : 23px;
+    margin-top : 5px;
+    font-family: BrandonTextLight;
+    color      : #ffffff;
+}
+
+.right-slide-text-alignment {
+    text-align     : justify;
+    text-align-last: right;
+}
+
+.first-slide-small-text {
+    font-family   : GothamMedium;
+    line-height   : 25px;
+    font-size     : 18px;
+    margin-top    : 10px;
+    // font-family: BrandonTextLight;
+    color         : #ffffff;
+
+}
+.second-slide-main-text{
+    font-family: BrandonTextLight;
+    font-weight: 900;
+    margin-left: 100px !important;
+    font-size: 45px;
+    color:black;
+}
+
+.second-slide-large-text{
+    color: black;
+    font-family: GothamMedium;
+    font-size: 16px;
+    margin-top: 15px;
+}
+.second-slide-small-text{
+    color: black;
+    font-family: BrandonTextLight;
+    font-weight: 600;
+    font-size: 12px;
+}
+.second-slide-images{
+    height:45px;
+}

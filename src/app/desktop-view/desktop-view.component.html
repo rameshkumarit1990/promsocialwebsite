@@ -1,0 +1,67 @@
+<!-- first-slide-view -->
+<div class=" container-fluid first-slide-background">
+  <div class="row">
+    <div class="col-sm-4 offset-8 mt-5" style="text-align: right;">
+      <img src="../../assets/images/desktopimages/logo.png" alt="Image" style="width: 40%;" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-5 offset-1">
+      <div class="large-text">The New
+        <br> Way To Do Prom</div>
+      <div class="first-slide-small-text">PromSocial is a powerful app that helps you get the most
+        <br>out of prom. From finding a date, planning your parties,
+        <br>and shopping for all your prom needs, PromSocial does it all.
+      </div>
+    </div>
+    <div class="col-sm-3 offset-1">
+      <img src="../../assets/images/desktopimages/1splash Phone.png" alt="image" style="width: 300px;">
+    </div>
+  </div>
+</div>
+
+<!-- second-slide-view -->
+<div class="container-fluid " >
+  <div class="second-slide-main-text m-5">What you can do with PromSocial</div>
+  <div class="row ml-3" >
+    <div class="col-sm-2 d-flex flex-column border-right border-bottom pt-4" *ngFor="let slides of secondSlide;  let i = index">
+      <img src="{{slides.image}}" alt="image" class="second-slide-images">
+      <p class="second-slide-large-text">{{slides.largetext}}</p>
+      <p class="second-slide-small-text">{{slides.smalltext}}</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" *ngFor="let content of desktopView;  let i = index">
+  <!--left- slide-view -->
+  <div class="row slide-view " style="background-image: url({{content.backgroundurl}});">
+    <div class="col-sm-3 offset-1 my-auto ">
+      <img src="{{content.image}}" alt="Image" class="image-responsive mobile-image" />
+    </div>
+    <div class="col-sm-6 my-auto pb-5">
+      <img src="{{content.icon}}" alt="Image" class="image-responsive left-icon-image" />
+      <div class="large-text">
+        {{content.title}}
+      </div>
+      <div class="small-text">
+        {{content.subtitle}}
+      </div>
+    </div>
+  </div>
+  <!-- right-slide-view -->
+  <div class="row slide-view " style="background-image: url({{content.rightBackgroundurl}});">
+    <div class="col-sm-6 offset-1 my-auto pb-5">
+      <img src="{{content.rightIcon}}" alt="Image" class="image-responsive right-icon-image  " />
+      <div class="large-text right-slide-text-alignment">
+        {{content.rightTitle}}
+      </div>
+      <div class="small-text right-slide-text-alignment">
+        {{content.rightSubtitle}}
+      </div>
+    </div>
+    <div class="col-sm-3 offset-1  my-auto ">
+      <img src="{{content.rightImage}}" alt="Image" class="image-responsive mobile-image" />
+    </div>
+  </div>
+</div>
