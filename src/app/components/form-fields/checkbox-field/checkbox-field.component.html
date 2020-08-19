@@ -1,0 +1,5 @@
+<div [formGroup]="group" class="mb-2 d-inline-flex w-25">
+    <section class="w-50 text-left">
+        <mat-checkbox [formControlName]="config?.id">{{config.meta.fieldLabel || ''}}</mat-checkbox>
+    </section>
+</div>

@@ -1,0 +1,20 @@
+<div [formGroup]="group" class="my-4">
+    <div class="w-50 mx-auto field-border-bottom">
+        <div class="text-left mr-4 label-view">
+            <div>
+                <label class="btn-label mb-1">{{config.meta.fieldLabel}}</label>
+            </div>
+            <div>
+                <label matRipple class="image-upload-container btn btn-bwm">
+                    <span>{{config.meta.buttonLabel}}</span>
+                    <input type="file" accept="image/*" (change)="uploadImage($event)" multiple>
+                </label>
+                <input type="hidden" [formControlName]="config?.id">
+            </div>
+        </div>
+        <div class="img-preview-container mt-2" *ngIf="imageString && imageString !==''">
+            <div class="img-preview" [ngStyle]="{'background-image': 'url('+ imageString + ')'}"></div>
+        </div>
+        <div [ngClass]="{'alert-message': errorMessage !== ''}" *ngIf="errorMessage !== ''">{{errorMessage}} </div>
+    </div>
+</div>

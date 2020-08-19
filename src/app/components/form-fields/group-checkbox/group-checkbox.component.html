@@ -1,0 +1,20 @@
+<div [formGroup]="group" class="mb-2">
+  <input type="hidden" [formControlName]="config?.id">
+  <section class="w-50 text-left mx-auto">
+    <span>
+      <mat-checkbox class="example-margin" [indeterminate]="partialCheck" [checked]="allComplete"
+        (change)="selectAll($event.checked)">
+        {{config.meta.groupOption.name}}
+      </mat-checkbox>
+    </span>
+    <span>
+      <ul>
+        <li *ngFor="let listValue of config.meta.groupOption.listValues">
+          <mat-checkbox [checked]="listValue.selected" (change)="onOptionChange(listValue,$event)">
+            {{listValue.name}}
+          </mat-checkbox>
+        </li>
+      </ul>
+    </span>
+  </section>
+</div>

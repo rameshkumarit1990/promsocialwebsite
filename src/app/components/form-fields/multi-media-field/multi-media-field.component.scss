@@ -1,0 +1,93 @@
+$main-color: #c6538c;
+
+input {
+    display: none;
+}
+
+.btn-bwm {
+    background-color: $main-color;
+    border-color    : $main-color;
+    color           : white;
+    padding         : 8px;
+    font-size       : 15px;
+    min-width       : 120px;
+    text-align      : center;
+
+    &:hover,
+    &:focus,
+    &:active {
+        border-color    : $main-color !important;
+        background-color: $main-color !important;
+    }
+}
+
+
+.image-upload-container {
+    cursor: pointer;
+}
+
+.img-preview-container {
+    background-color: #f7f7f7;
+    position        : relative;
+
+    .img-preview {
+        background     : center center no-repeat;
+        background-size: contain;
+        height         : 14vh;
+        width          : 6vw;
+
+        &-error {
+            display: none;
+        }
+    }
+}
+
+.label-view {
+    display       : flex;
+    flex-direction: column;
+    color         : rgba(0, 0, 0, 0.54);
+}
+
+.field-border-bottom {
+    border-bottom : 1px solid #949494;
+    padding-bottom: 5px;
+}
+
+::-webkit-scrollbar {
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background   : linear-gradient(180deg, #cad5e0, #cad3dc);
+    border-radius: 16px;
+}
+
+.delete-button {
+    position  : absolute;
+    top       : 0;
+    right     : 0;
+    background: #fff;
+    width     : 20px;
+    height    : 20px;
+    text-align: center;
+
+    .mat-icon {
+        font-size      : 12px;
+        width          : 20px;
+        height         : 20px;
+        position       : absolute;
+        top            : 0;
+        right          : 0;
+        display        : inline-flex;
+        align-items    : center;
+        justify-content: center;
+        font-weight    : 700;
+    }
+}
+
+.alert-message {
+    padding   : 8px;
+    background: #d04a4b;
+    color     : #fff;
+    font-size : 14px;
+}

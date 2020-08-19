@@ -1,0 +1,31 @@
+<div class="my-4">
+  <div class="w-50 mx-auto field-border-bottom">
+    <div class="text-left mr-4 label-view">
+      <div>
+        <label class="btn-label mb-1">{{config.fieldLabel}}</label>
+      </div>
+      <div>
+        <label matRipple class="image-upload-container btn btn-bwm">
+          <span>{{config.buttonLabel}}</span>
+          <input *ngIf="!config.multiple" type="file" accept={{config.mode}} (change)="onSelectFile($event)">
+          <input *ngIf="config.multiple" type="file" accept={{config.mode}} (change)="onSelectFile($event)" multiple>
+        </label>
+        <!-- <input type="hidden" [formControlName]="config?.id"> -->
+      </div>
+    </div>
+    <div class="img-preview-container mt-2 d-flex overflow-auto" *ngIf="selectedFiles.length">
+      <ng-container *ngIf="config.type ==='image'">
+        <span *ngFor="let file of selectedFiles; let i=index" class="mr-2 position-relative">
+          <div class="img-preview" [ngStyle]="{'background-image': 'url('+ file.src + ')'}"></div>
+          <button mat-icon-button class="delete-button" color="warn" (click)="deleteImage(i)">
+            <mat-icon>clear</mat-icon>
+          </button>
+        </span>
+      </ng-container>
+      <ng-container *ngIf="config.type ==='video'">
+        <video *ngFor='let file of selectedFiles' [src]="file.src" height="100" controls></video>
+      </ng-container>
+    </div>
+    <div [ngClass]="{'alert-message': errorMessage !== ''}" *ngIf="errorMessage !== ''">{{errorMessage}} </div>
+  </div>
+</div>
