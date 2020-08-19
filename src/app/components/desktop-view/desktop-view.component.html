@@ -1,0 +1,104 @@
+<div class="desktop-view">
+  <!-- first-slide-view -->
+  <div class="container-fluid first-slide-background" (click)="playPromVideo = false;">
+    <div class="row">
+      <div class="col-xs-12 col-sm-3 offset-sm-9 move-right-animation p-4 text-center">
+        <img src="../../assets/images/desktopimages/logo.png" alt="Image" style="width: 16vw;" />
+      </div>
+    </div>
+    <div class="row ">
+      <div class="col-6 offset-1 vertical-animation">
+        <div class="large-text">Plan Prom
+          <br>With Your Freinds
+        </div>
+        <div class="first-slide-small-text">PromSocial is a powerful app that helps you get the most
+          <br>out of prom. From finding a date, planning your parties,
+          <br>and shopping for all your prom needs, PromSocial does it all.
+          <div class="d-flex mt-5">
+            <button mat-raised-button class="desktop-button blue-button">Download App</button>
+            <button mat-raised-button class="desktop-button pink-button ml-4" (click)="showMarketModal()">Join
+              Marketplace</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-3" style="position: relative;">
+        <img *ngIf="!playPromVideo" class="fade-animation" src="../../assets/images/desktopimages/splashPhone.png"
+          alt="image" style="width: 300px;position: absolute;top: 20%;">
+        <video *ngIf="playPromVideo" controls autoplay muted (ended)="playPromVideo = false" class="first-slide-video">
+          <source src="../../assets/videos/promsocial.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+          The autoplay attribute does not work in mobile devices like iPad and iPhone.
+        </video>
+        <div *ngIf="!playPromVideo" class="desktop-play-btn-positioning play-btn " (click)="closePromVideo($event)">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- second-slide-view -->
+  <div class="container-fluid">
+    <div class="second-slide-title m-5 ">What you can do with PromSocial</div>
+    <div class="row " style="margin-bottom: 150px;">
+      <div class="col-4" [ngClass]="{'offset-2': i==0 || i==2 || i==4, 'border-bottom': i<4 }"
+        *ngFor="let content of desktopView;  let i = index">
+        <div class="row">
+          <div class="col-6 border-right pt-4">
+            <img class="second-slide-images" src="{{content.leftIcon}}" alt="image">
+            <p class="second-slide-large-text">{{content.leftLargetext}}</p>
+            <p class="second-slide-small-text">{{content.leftSmalltext}}</p>
+          </div>
+          <div class="col-6 border-right pt-4">
+            <img class="second-slide-images" src="{{content.rightIcon}}" alt="image">
+            <p class="second-slide-large-text">{{content.rightLargetext}}</p>
+            <p class="second-slide-small-text">{{content.rightSmalltext}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid" *ngFor="let content of desktopView;  let i = index">
+    <!--left- slide-view -->
+    <div class="row slide-view " style="background-image: url({{content.leftBackgroundurl}});">
+      <div class="col-3 offset-1 my-auto ">
+        <img src="{{content.leftMobileimage}}" alt="Image" class="image-responsive mobile-image" />
+      </div>
+      <div class="col-6 my-auto pb-5">
+        <img src="{{content.leftIcon}}" alt="Image" class="image-responsive left-icon-image" />
+        <div class="large-text">
+          {{content.leftLargetext}}
+        </div>
+        <div class="small-text">
+          {{content.leftSmalltext}}
+        </div>
+        <button *ngIf="i==0" mat-raised-button class="desktop-button blue-button mt-4" (click)="showMarketModal()">Join
+          Marketplace</button>
+      </div>
+    </div>
+    <!-- right-slide-view -->
+    <div class="row slide-view " style="background-image: url({{content.rightBackgroundurl}});">
+      <div class="col-6 offset-1 my-auto pb-5">
+        <img src="{{content.rightIcon}}" alt="Image" class="image-responsive right-icon-image" />
+        <div class="large-text right-slide-text-alignment">
+          {{content.rightLargetext}}
+        </div>
+        <div class="small-text right-slide-text-alignment">
+          {{content.rightSmalltext}}
+        </div>
+        <div class="d-flex justify-content-around mt-4">
+          <button *ngIf="i==0" mat-raised-button class="desktop-button blue-button"
+            routerLink="/promsocialBlogs">Promsocial
+            Blogs</button>
+          <button *ngIf="i==0" mat-raised-button class="desktop-button pink-button" routerLink="/dashboard">Create
+            Blog</button>
+        </div>
+      </div>
+      <div class="col-3 offset-1  my-auto ">
+        <img src="{{content.rightMobileimage}}" alt="Image" class="image-responsive mobile-image" />
+      </div>
+
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

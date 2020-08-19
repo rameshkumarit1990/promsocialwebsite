@@ -1,0 +1,55 @@
+<mat-sidenav-container *ngIf="!showView" style="height: 100%;" class="blog-cover-image">
+    <mat-sidenav #sidenav mode="side" class="side-menu">
+        <div style="text-align: center;width: 220px;" class="mb-4">
+            <div><img style="width: 32%;" src="../../../assets/images/desktopimages/icon.png" alt=""></div>
+            <div><img style="width: 74%;" src="../../../assets/images/desktopimages/logo-text.png" alt=""></div>
+        </div>
+        <mat-nav-list>
+            <a mat-list-item routerLink="home" class="list-item white-anchor">Home</a>
+            <a mat-list-item routerLink="newBlog" class="list-item white-anchor">New Blog</a>
+            <a mat-list-item routerLink="blogs" class="list-item white-anchor">Blogs</a>
+            <a mat-list-item routerLink="addStore" class="list-item white-anchor">Add Store</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content style="padding: 16px;">
+        <div>
+            <button mat-mini-fab color="primary" (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <button mat-mini-fab color="primary" class="float-right" [routerLink]="['/login']">
+                <mat-icon>logout</mat-icon>
+            </button>
+            <!-- <button mat-mini-fab color="primary" class="float-right" (click)="showView=!showView">
+                <mat-icon>home</mat-icon>
+            </button> -->
+            <div class="float-right d-inline-flex blog-search-input">
+                <mat-form-field floatLabel='never'>
+                    <input matInput placeholder="Search" value="" autocomplete="off">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="mt-2">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+<!-- <div *ngIf="showView"
+    style="background-color: #FF3CAC;background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);height: 100vh;">
+    <button mat-mini-fab color="primary" class="float-right" (click)="showView=!showView">
+        <mat-icon>home</mat-icon>
+    </button>
+    <div class="row" style="margin: auto;">
+        <div class="col-3">
+            <mat-card>Simple card</mat-card>
+        </div>
+        <div class="col-3">
+            <mat-card>Simple card</mat-card>
+        </div>
+        <div class="col-3">
+            <mat-card>Simple card</mat-card>
+        </div>
+        <div class="col-3">
+            <mat-card>Simple card</mat-card>
+        </div>
+    </div>
+</div> -->

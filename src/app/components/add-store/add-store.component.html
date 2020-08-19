@@ -1,0 +1,16 @@
+<div class="container">
+    <mat-card class="text-center">
+        <mat-card-title class="title-heading">Add Store</mat-card-title>
+        <dynamic-form *ngIf="storeData?.length; else noDataForm" [config]="storeData">
+        </dynamic-form>
+        <button mat-raised-button color="primary" class="mb-4 mt-5" (click)="saveStoreForm()">
+            <span><i class="fa fa-cloud "></i>Submit</span>
+        </button>
+    </mat-card>
+</div>
+
+<ng-template #noDataForm>
+    <div class="p-4 text-center text-muted">
+        <h6>Form not Loaded</h6>
+    </div>
+</ng-template>
