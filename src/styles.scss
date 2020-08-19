@@ -1,8 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+@import "_variables";
+@import "_reset";
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+// Import Bootstrap Reboot
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/utilities";
+
+html,
 body {
-    margin                : 0;
-    -webkit-font-smoothing: antialiased !important;
-    font-family           : GothamMedium;
-    color                 : #fff;
+    height    : 100%;
+    box-sizing: border-box;
+    overflow  : hidden;
+}
+
+body {
+    margin     : 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// ::-webkit-scrollbar {
+//     width : 5px;
+//     height: 50px;
+// }
+
+::-webkit-scrollbar-thumb {
+    background   : linear-gradient(180deg, #ff8a00, #e52e71);
+    border-radius: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(90deg, #d2d2d2, #d2d2d2 1px, #d2d2d2 0, #fff);
+}
+
+.app-scroll {
+    ::-webkit-scrollbar {
+        width : 5px !important;
+        height: 50px;
+    }
+}
+
+#mobileView {
+    ::-webkit-scrollbar {
+        width : 0 !important;
+        height: 50px;
+    }
 }
 
 @font-face {
@@ -11,13 +56,6 @@ body {
     font-weight: normal;
     font-style : normal;
 }
-
-// @font-face {
-//     font-family: 'HARABARA';
-//     src: url('../fonts/HARABARA MAIS DEMO_0.otf') format('truetype');
-//     font-weight: normal;
-//     font-style: normal;
-// }
 
 @font-face {
     font-family: 'GothamBookRegular';
@@ -70,7 +108,7 @@ body {
 
 @font-face {
     font-family: 'GothamMedium';
-    src        : url('./assets/fonts/GothamMedium.ttf') format('woff');
+    src        : url('./assets/fonts/GothamMedium.ttf') format('opentype');
     font-weight: normal;
     font-style : normal;
 }
@@ -80,116 +118,76 @@ body {
     src        : url('./assets/fonts/promsocial.ttf') format('truetype');
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 750px),
-(min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait),
-(min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
-    .mobile-view {
-        display: block;
-    }
 
-    .desktop-view {
-        display: none;
-    }
+.text-center {
+    text-align: center !important;
 }
 
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait),
-(min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
 
-    .mobile-view {
-        display: block;
-    }
-
-    .desktop-view {
-        display: none;
-    }
+.desktop-button {
+    height         : 50px;
+    font-family    : GothamMedium !important;
+    width          : 200px;
+    font-size      : 12px;
+    border-radius  : 24px !important;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    font-weight    : 800;
 }
-
-@media only screen and (min-device-width: 320px) and (max-device-height: 750px) and (orientation: landscape) {
-
-    .mobile-view {
-        display: block;
-    }
-
-    .desktop-view {
-        display: none;
-    }
-}
-
-@media only screen and (min-device-width: 1355px) and (max-device-width: 1370px) and (min-device-height: 760px) and (max-device-height: 770px) {
-
-    .mobile-view {
-        display: none;
-    }
-
-    .desktop-view {
-        display: block;
-    }
-}
-
-@media only screen and (min-device-width: 1420px) and (max-device-width: 1440px) {
-
-    .mobile-view {
-        display: none;
-    }
-
-    .desktop-view {
-        display: block;
-    }
-}
-
-@media only screen and (min-device-width: 2020px) and (max-device-width: 2100px) {
-
-    .mobile-view {
-        display: none;
-    }
-
-    .desktop-view {
-        display: block;
-    }
-}
-
-@media only screen and (min-device-width: 1260px) and (max-device-width: 1280px) {
-
-    .mobile-view {
-        display: none;
-    }
-
-    .desktop-view {
-        display: block;
-    }
-}
-
-@media screen and (min-device-width: 1880px) and (max-width: 1920px) {
-
-    .mobile-view {
-        display: none;
-    }
-
-    .desktop-view {
-        display: block;
-    }
-}
-
-@media only screen and (max-device-width: 2100px) and (min-device-width: 2020px) {
-
-    .mobile-view {
-        display: none;
-    }
-
-    .desktop-view {
-        display: block;
-    }
-}
-
 
 .pink-button {
-    background     : #d90081;
-    color          : #fff;
-    text-decoration: none;
+    // background     : #d90081;
+    background-image: linear-gradient(24deg, #c73e7f 0%, #e74894 100%);
+    color           : #fff;
+    text-decoration : none;
 }
 
 .blue-button {
-    background     : #0c7ae5;
-    color          : #fff;
-    text-decoration: none;
+    // background     : #0c7ae5;
+    background-image: linear-gradient(174deg, #333dff 0%, #5200e7 100%);
+    color           : #fff;
+    text-decoration : none;
+}
+
+.btn:hover {
+    color: #fff;
+}
+
+.btn.focus,
+.btn:focus {
+    box-shadow: none;
+}
+
+#desktopView {
+    display: block;
+}
+
+#mobileView {
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    #desktopView {
+        display: none;
+    }
+
+    #mobileView {
+        display   : block;
+        height    : 100%;
+        overflow-y: auto;
+    }
+}
+
+.cdk-overlay-pane {
+    max-width: 60vw !important;
+}
+
+.white-anchor,
+.white-anchor::hover {
+    color: #fff;
+}
+
+.justify-space-evenly {
+    justify-content: space-evenly;
 }
