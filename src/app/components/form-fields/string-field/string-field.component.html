@@ -1,0 +1,6 @@
+<div [formGroup]="group" class="mb-2">
+    <mat-form-field class="w-50">
+        <mat-label>{{config.meta.fieldLabel || ''}}</mat-label>
+        <input matInput [placeholder]="config?.placeholder" [formControlName]="config?.id">
+    </mat-form-field>
+</div>

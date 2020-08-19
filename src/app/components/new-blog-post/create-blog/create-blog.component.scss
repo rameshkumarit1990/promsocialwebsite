@@ -1,0 +1,130 @@
+mat-form-field {
+    width       : 70%;
+    margin-left : auto;
+    margin-right: auto;
+
+}
+
+.card-container {
+    text-align   : center;
+    margin-bottom: 50px;
+    border-top   : 24px solid #040737;
+    border-bottom: 24px solid #040737;
+    border-left  : 20px solid #070c57;
+    border-right : 20px solid #070c57;
+    box-shadow   : 0 0px 2px black;
+    box-shadow   : 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-container {
+    margin: auto;
+}
+
+.pink-button {
+    background-image: linear-gradient(24deg, #c73e7f 0%, #e74894 100%);
+}
+
+.blue-button {
+    background-image: linear-gradient(174deg, #333dff 0%, #5200e7 100%);
+    color           : white;
+}
+
+.preview-cover-image {
+    height         : 400px;
+    width          : 100%;
+    object-fit     : cover;
+    object-position: center;
+}
+
+.preview-title {
+    font-family  : GothamMedium;
+    font-size    : 28px;
+    line-height  : 30px;
+    text-align   : center;
+    font-weight  : bold;
+    margin-bottom: 25px;
+    color        : black;
+
+}
+
+.preview-text {
+    font-family  : Avenir-Book;
+    font-size    : 16px;
+    margin-bottom: 25px;
+    color        : black;
+}
+
+.preview-specific-text {
+    font-family   : GothamMedium;
+    font-size     : 9px;
+    line-height   : 15px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    opacity       : 0.8;
+    text-align    : center;
+    margin-bottom : 25px;
+    color         : black;
+}
+
+
+
+.company-logo {
+    opacity            : 1;
+    display            : block;
+    transition         : .5s ease;
+    backface-visibility: hidden;
+    background-size    : cover;
+    background-repeat  : no-repeat;
+    background-position: center;
+    height             : 80px;
+    width              : 80px;
+    border-radius      : 50%;
+}
+
+.client-image-container {
+    position        : relative;
+    width           : 80px;
+    height          : 80px;
+    margin          : auto;
+    background-color: antiquewhite;
+}
+
+.camera-icon-layer {
+    transition   : .5s ease;
+    opacity      : 1;
+    position     : absolute;
+    top          : 50%;
+    left         : 50%;
+    transform    : translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align   : center;
+    cursor       : pointer;
+}
+
+.client-image-container:hover .camera-icon-layer {
+    opacity: 1;
+    cursor : pointer;
+}
+
+.camera-icon {
+    font-size: 25px;
+    color    : #6c757d;
+    cursor   : pointer;
+}
+
+.camera-input {
+    opacity : 0;
+    position: absolute;
+    z-index : 0;
+    width   : 50px;
+    height  : 50px;
+    top     : -5px;
+    left    : -11px;
+    cursor  : pointer;
+}
+
+.delete-icon {
+    position: absolute;
+    right   : 16px;
+    top     : 40%;
+}

@@ -1,0 +1,74 @@
+[
+    {
+        "leftBackgroundurl": "assets/images/desktopimages/store-bg.jpg",
+        "leftMobileimage": "assets/images/desktopimages/DirectoryPhone.png",
+        "leftIcon": "assets/images/desktopimages/market-icon.svg",
+        "leftLargetext": "Find The Best Stores",
+        "leftSmalltext": "Search and receive the best discounts in our market directory.",
+        "rightBackgroundurl": "assets/images/desktopimages/news-bg.jpg",
+        "rightMobileimage": "assets/images/desktopimages/NewsPhone.png",
+        "rightIcon": "assets/images/desktopimages/mycontent.svg",
+        "rightLargetext": "Get Updated",
+        "rightSmalltext": "Read the latest news and tips on how to have an amazing prom experience."
+    },
+    {
+        "leftBackgroundurl": "assets/images/desktopimages/date-bg.jpg",
+        "leftMobileimage": "assets/images/desktopimages/FindaDatePhone.png",
+        "leftIcon": "assets/images/desktopimages/date.svg",
+        "leftLargetext": "Find A Date",
+        "leftSmalltext": "Express interest in someone or ask them directly to prom.",
+        "rightBackgroundurl": "assets/images/desktopimages/promposal-bg.jpg",
+        "rightMobileimage": "assets/images/desktopimages/FindaDate(popup)Phone.png",
+        "rightIcon": "assets/images/desktopimages/promposal.svg",
+        "rightLargetext": "Send Promposals",
+        "rightSmalltext": "Customize a video and send to your dream date."
+    },
+    {
+        "leftBackgroundurl": "assets/images/desktopimages/limo-bg.jpg",
+        "leftMobileimage": "assets/images/desktopimages/LimoPartyPhone.png",
+        "leftIcon": "assets/images/desktopimages/limoparty.svg",
+        "leftLargetext": "Create A Limo Party",
+        "leftSmalltext": "Organize a limo party for you and your friends.",
+        "rightBackgroundurl": "assets/images/desktopimages/afterparty-bg.jpg",
+        "rightMobileimage": "assets/images/desktopimages/AfterPartyPhone.png",
+        "rightIcon": "assets/images/desktopimages/afterparty.svg",
+        "rightLargetext": "Plan An Afterparty",
+        "rightSmalltext": "Keep the party going after prom.Invite, plan, and share."
+    },
+    {
+        "leftBackgroundurl": "assets/images/desktopimages/chat-bg.jpg",
+        "leftMobileimage": "assets/images/desktopimages/ChatPhone.png",
+        "leftIcon": "assets/images/desktopimages/chat.svg",
+        "leftLargetext": "Chat With Friends",
+        "leftSmalltext": "Chat with your date, your friends or within your limo and after party.",
+        "rightBackgroundurl": "assets/images/desktopimages/outfit-bg.jpg",
+        "rightMobileimage": "assets/images/desktopimages/MyOutfitPhone.png",
+        "rightIcon": "assets/images/desktopimages/outfits.svg",
+        "rightLargetext": "Share Your Outfit",
+        "rightSmalltext": "Show off what you're wearing on the big day."
+    },
+    {
+        "leftBackgroundurl": "assets/images/desktopimages/checklist-bg.jpg",
+        "leftMobileimage": "assets/images/desktopimages/MyChecklistphone.png",
+        "leftIcon": "assets/images/desktopimages/checklist.svg",
+        "leftLargetext": "Plan Your Prom",
+        "leftSmalltext": "Stay organized with your customizable prom checklist.",
+        "rightBackgroundurl": "assets/images/desktopimages/vote-bg.jpg",
+        "rightMobileimage": "assets/images/desktopimages/VotingNowPhone.png",
+        "rightIcon": "assets/images/desktopimages/trophy.svg",
+        "rightLargetext": "Vote",
+        "rightSmalltext": "Cast your vote and become a Prom Legend."
+    },
+    {
+        "leftBackgroundurl": "assets/images/desktopimages/photos-bg.jpg",
+        "leftMobileimage": "assets/images/desktopimages/MyPhotosPhone.png",
+        "leftIcon": "assets/images/desktopimages/photos.svg",
+        "leftLargetext": "Share Your Photos",
+        "leftSmalltext": "Seamlessly share all of your prom pictures with your class.",
+        "rightBackgroundurl": "assets/images/desktopimages/prombook-bg.jpg",
+        "rightMobileimage": "assets/images/desktopimages/MyPrombookPhone.png",
+        "rightIcon": "assets/images/desktopimages/prombook.svg",
+        "rightLargetext": "Create A Prombook",
+        "rightSmalltext": "Make prom last forever with your very own personal prombook."
+    }
+]

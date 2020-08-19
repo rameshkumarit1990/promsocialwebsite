@@ -1,0 +1,33 @@
+<div class="store-forms-container">
+  <div class="container pt-5">
+    <mat-card class="mb-5">
+      <mat-card-header>
+        <div class="text-center">
+          <img class="logo" src="../../../assets/images/desktopimages/pslogofull.png">
+        </div>
+      </mat-card-header>
+      <mat-card-content>
+        <form id="storeForm" [formGroup]="marketstoreForm">
+          <mat-horizontal-stepper linear>
+            <mat-step formGroupName="contactDetails" [stepControl]="marketstoreForm.get('contactDetails')">
+              <ng-template matStepLabel>Contact Details</ng-template>
+              <app-contact-details [storeForm]="marketstoreForm"></app-contact-details>
+            </mat-step>
+            <mat-step formGroupName="storeInformation" [stepControl]="marketstoreForm.get('storeInformation')">
+              <ng-template matStepLabel>Store Details</ng-template>
+              <app-store-details [storeForm]="marketstoreForm"></app-store-details>
+            </mat-step>
+            <mat-step>
+              <ng-template matStepLabel>Preview</ng-template>
+              <app-store-details-preview></app-store-details-preview>
+            </mat-step>
+          </mat-horizontal-stepper>
+        </form>
+        <!-- <div class="py-5 d-flex justify-space-evenly">
+          <button mat-button class="float-left pink-button">Previous</button>
+          <button mat-button class="float-right blue-button" onclick="contactInfoNext()">Next</button>
+        </div> -->
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

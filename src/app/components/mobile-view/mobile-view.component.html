@@ -1,0 +1,51 @@
+<div class="mobile-view" style="position: relative;">
+  <div class="video-background" *ngIf="!playVideo">
+    <video autoplay muted loop class="video-container">
+      <source src="../../../assets/images/mobileviewimages/videos/jumping-girl.mp4" type="video/mp4">
+    </video>
+    <div class="col-2 offset-5 play-btn mobile-play-btn" (click)="playMobilePromsocialVideo()"
+      style="top: 15%;position: absolute;">
+    </div>
+    <div class="logo-over-video">
+      <img class="mobile-logo" src="../../../assets/images/mobileviewimages/MobileLogo.png" alt="image">
+    </div>
+    <div class="text-over-video text-white">
+      <p class="mobile-large-text">Hey You!</p>
+      <p class="mobile-small-text">Welcome to the new way to do Prom.</p>
+      <p class="mobile-small-text">Ready to have the best night of your life?</p>
+    </div>
+  </div>
+  <div *ngIf="playVideo" style="height: 90%; background-image: none !important;" id="mobilePromsocialVideo">
+    <video controls autoplay muted id="mobileVideo" (ended)="playVideo=false" style="width: 100%;height: 90vh;">
+      <source src="../../../assets/videos/promsocial.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+      The autoplay attribute does not work in mobile devices like iPad and iPhone.
+    </video>
+    <button mat-mini-fab color="warn" aria-label="close" class="close-video" (click)="playVideo=false">
+      <mat-icon style="font-size: 15px;">close</mat-icon>
+    </button>
+  </div>
+  <div class="container-fluid" style="padding-bottom: 50px;">
+    <div class="my-3 title">What you can do with PromSocial</div>
+    <div class="row mb-4">
+      <div class="col-8 offset-2" *ngFor="let content of appData;  let i = index">
+        <div class="row mx-auto">
+          <div class="col-12 pt-4">
+            <img class="second-slide-images" src="{{content.leftIcon}}" alt="image">
+            <p class="second-slide-large-text">{{content.leftLargetext}}</p>
+            <p class="second-slide-small-text">{{content.leftSmalltext}}</p>
+          </div>
+          <div class="col-12  pt-4">
+            <img class="second-slide-images" src="{{content.rightIcon}}" alt="image">
+            <p class="second-slide-large-text">{{content.rightLargetext}}</p>
+            <p class="second-slide-small-text">{{content.rightSmalltext}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-inline-flex container justify-content-center mb-2 text-center footer-btns">
+    <a mat-button class="mobile-button blue-button" href="https://promsocial.app.link/BN2t8fKR23">DOWNLOAD APP</a>
+    <a mat-button class="mobile-button pink-button ml-4">JOIN MARKETPLACE</a>
+  </div>
+</div>

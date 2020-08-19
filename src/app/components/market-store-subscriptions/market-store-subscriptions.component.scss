@@ -1,0 +1,62 @@
+.app-scroll {
+    height    : 100vh;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width : 5px !important;
+    height: 20px;
+}
+
+.shadow {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+.plan-container {
+    padding         : 20px;
+    min-height      : 320px;
+    background-color: #f7f8f9;
+    text-align      : center;
+}
+
+.plan-heading-div {
+    color         : #0c7ae5;
+    text-align    : center;
+    border-bottom : 1px solid #dadcdc;
+    padding-bottom: 16px;
+    width         : 80%;
+    margin        : 16px auto;
+}
+
+.plan-heading {
+    font-size     : 18px;
+    color         : #0c7ae5;
+    text-align    : center;
+    font-family   : GothamMedium;
+    font-weight   : 700;
+    font-style    : normal;
+    text-transform: uppercase;
+    padding       : 10px 20px;
+    letter-spacing: 1px;
+
+}
+
+.plan-amount-text {
+    font-size    : 20px;
+    text-align   : center;
+    margin-bottom: 40px;
+    color        : black;
+}
+
+.dollar-positon {
+    position : relative;
+    top      : -12px;
+    font-size: 30px;
+}
+
+.contact-us {
+    font-family: BrandonTextLight;
+    padding    : 9px 0px 9px 0px;
+    font-weight: 900;
+    font-size  : 25px;
+}

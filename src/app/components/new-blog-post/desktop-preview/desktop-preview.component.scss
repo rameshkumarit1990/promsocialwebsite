@@ -1,0 +1,61 @@
+.mb-5 {
+    margin-bottom: 25px;
+}
+
+.preview-title {
+    font-family: GothamMedium;
+    font-size  : 28px;
+    line-height: 30px;
+    text-align : center;
+    font-weight: bold;
+}
+
+.fit-image {
+    object-fit     : cover;
+    object-position: center;
+}
+
+.cover-title-image {
+    height: 400px;
+    width : 100%;
+
+}
+
+.cover-image {
+    height: 400px;
+    width : 50%;
+}
+
+.caption {
+    font-family: Avenir-Book;
+    font-size  : 18px;
+    text-align : center;
+    margin-top : 10px;
+}
+
+.preview-text {
+    font-family: Avenir-Book;
+    font-size  : 18px;
+}
+
+.preview-subtitle {
+    font-family: BrandonTextThin;
+    font-size  : 23px;
+    line-height: 30px;
+    text-align : left;
+}
+
+.preview-video {
+    width     : 100%;
+    text-align: center;
+}
+
+.preview-specific-text {
+    font-family   : GothamMedium;
+    font-size     : 9px;
+    line-height   : 15px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    opacity       : 0.8;
+    text-align    : center;
+}

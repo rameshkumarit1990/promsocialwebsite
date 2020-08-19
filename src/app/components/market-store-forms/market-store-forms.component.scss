@@ -1,0 +1,26 @@
+.mat-stepper-horizontal {
+    margin-top: 8px;
+}
+
+.mat-form-field {
+    margin-top: 16px;
+}
+
+.logo {
+    width  : 25%;
+    padding: 14px;
+}
+
+.store-forms-container {
+    height    : 100vh;
+    overflow-y: auto;
+    background: linear-gradient(90deg,
+            rgba(255, 171, 27, 0.7),
+            rgba(245, 0, 140, 0.7),
+            rgba(95, 78, 174, 0.7))
+}
+
+::-webkit-scrollbar {
+    width : 5px !important;
+    height: 20px;
+}

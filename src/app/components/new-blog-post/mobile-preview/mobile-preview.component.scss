@@ -1,0 +1,63 @@
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mobile-preview-container {
+    max-width   : 350px;
+    margin-left : auto;
+    margin-right: auto;
+}
+
+.mobile-preview-title {
+    font-family: BrandonTextThin;
+    font-size  : 28px;
+    line-height: 30px;
+    text-align : center;
+
+}
+
+.caption {
+    font-family  : Avenir-Book;
+    font-size    : 12px;
+    text-align   : center;
+    margin-bottom: 20px;
+}
+
+.mobile-preview-text {
+    font-family  : Avenir-Book;
+    font-size    : 14px;
+    line-height  : 20px;
+    margin-bottom: 20px;
+
+}
+
+.mobile-preview-subtitle {
+    font-family  : BrandonTextThin;
+    font-size    : 20px;
+    line-height  : 20px;
+    text-align   : left;
+    margin-bottom: 20px;
+
+}
+
+.mobile-preview-specifictext {
+    font-family      : GothamMedium;
+    font-size        : 9px;
+    line-height      : 15px;
+    letter-spacing   : 1.4px;
+    text-transform   : uppercase;
+    opacity          : 0.5;
+    // padding-top   : 8px;
+    // padding-bottom: 8px;
+}
+
+// .mobile-preview-specifictext {
+//     font-family      : GothamMedium;
+//     font-size        : 9px;
+//     line-height      : 15px;
+//     letter-spacing   : 1.4px;
+//     text-transform   : uppercase;
+//     opacity          : 0.5;
+//     padding-top   : 8px;
+//     padding-bottom: 8px;
+// }

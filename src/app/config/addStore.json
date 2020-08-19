@@ -1,0 +1,322 @@
+[
+    {
+        "fieldType": "string",
+        "id": "b5ac18a4-0298-4513-b715-781f4d1a59bf",
+        "placeholder": "Enter Name",
+        "fieldValue": "",
+        "name": "name",
+        "isRequired": true,
+        "errorMessage": "Required",
+        "meta": {
+            "fieldLabel": "Name"
+        }
+    },
+    {
+        "fieldType": "textArea",
+        "id": "f2423a6e-5ee9-4839-8cbc-b302d199737e",
+        "placeholder": "Enter Description",
+        "fieldValue": "",
+        "name": "description",
+        "isRequired": true,
+        "errorMessage": "Required",
+        "meta": {
+            "fieldLabel": "Description"
+        }
+    },
+    {
+        "fieldType": "string",
+        "id": "c9d79e80-e30a-4f2f-94dd-889506fa7da0",
+        "placeholder": "Enter Address",
+        "fieldValue": "",
+        "name": "address",
+        "isRequired": true,
+        "errorMessage": "Required",
+        "meta": {
+            "fieldLabel": "Address"
+        }
+    },
+    {
+        "fieldType": "string",
+        "id": "8b5225f3-e931-4db1-8316-b1af043c0b53",
+        "placeholder": "Enter Opening Timings",
+        "fieldValue": "",
+        "name": "openTiming",
+        "isRequired": true,
+        "errorMessage": "Required",
+        "meta": {
+            "fieldLabel": "Store open timings (Ex: 10am to 12pm)"
+        }
+    },
+    {
+        "fieldType": "phoneNumber",
+        "id": "1367ffce-6c2b-4ea1-9959-a1b0bc73d977",
+        "placeholder": "Enter Phone Number",
+        "fieldValue": "",
+        "name": "phoneNumber",
+        "isRequired": true,
+        "errorMessage": "Required",
+        "meta": {
+            "fieldLabel": "Phone"
+        }
+    },
+    {
+        "fieldType": "dropdown",
+        "id": "ec54a275-1ff3-48b9-9b7f-aed2e3fae6b0",
+        "placeholder": "Cost Level",
+        "fieldValue": "",
+        "name": "costLevel",
+        "isRequired": true,
+        "errorMessage": "Required",
+        "meta": {
+            "fieldLabel": "Cost Level",
+            "options": [
+                {
+                    "label": "one",
+                    "value": 1
+                },
+                {
+                    "label": "two",
+                    "value": 2
+                },
+                {
+                    "label": "three",
+                    "value": 3
+                },
+                {
+                    "label": "four",
+                    "value": 4
+                }
+            ]
+        }
+    },
+    {
+        "fieldType": "string",
+        "id": "155e1b31-3709-4f2e-b279-b5d10f9d4cf1",
+        "placeholder": "Enter Tags",
+        "fieldValue": "",
+        "name": "tags",
+        "isRequired": true,
+        "errorMessage": "Required",
+        "meta": {
+            "fieldLabel": "Tags"
+        }
+    },
+    {
+        "fieldType": "string",
+        "id": "bdc63620-64e8-4086-803f-adcd4afea79d",
+        "placeholder": "Enter Website",
+        "fieldValue": "",
+        "name": "website",
+        "isRequired": true,
+        "errorMessage": "Required",
+        "meta": {
+            "fieldLabel": "Website"
+        }
+    },
+    {
+        "fieldType": "string",
+        "id": "1e9327a4-82a9-4b94-bac7-a6b3c3428fbf",
+        "placeholder": "Enter Discount Code",
+        "fieldValue": "",
+        "name": "discountCode",
+        "isRequired": true,
+        "errorMessage": "Required",
+        "meta": {
+            "fieldLabel": "Discount Code"
+        }
+    },
+    {
+        "fieldType": "string",
+        "id": "5e2e776d-06a0-4a6c-9f1b-51b559759562",
+        "placeholder": "Enter Discount Description",
+        "fieldValue": "",
+        "name": "discountDescription",
+        "isRequired": true,
+        "errorMessage": "Required",
+        "meta": {
+            "fieldLabel": "Discount Description"
+        }
+    },
+    {
+        "fieldType": "string",
+        "id": "350a0e1a-435f-426b-bab2-b8d797dcc6db",
+        "placeholder": "Enter Latitude",
+        "fieldValue": "",
+        "name": "latitude",
+        "isRequired": true,
+        "errorMessage": "Required",
+        "meta": {
+            "fieldLabel": "Latitude"
+        }
+    },
+    {
+        "fieldType": "string",
+        "id": "fd4a087b-aeda-49d6-939e-c260acb52f69",
+        "placeholder": "Enter Longitude",
+        "fieldValue": "",
+        "name": "longitude",
+        "isRequired": true,
+        "errorMessage": "Required",
+        "meta": {
+            "fieldLabel": "Longitude"
+        }
+    },
+    {
+        "fieldType": "groupCheckbox",
+        "id": "faa357d4-2d99-4641-856c-30999cb47fbb",
+        "fieldValue": [],
+        "name": "Gender",
+        "isRequired": true,
+        "errorMessage": "Required",
+        "meta": {
+            "fieldLabel": "Gender",
+            "groupOption": {
+                "name": "Gender",
+                "selected": false,
+                "listValues": [
+                    {
+                        "name": "Men's",
+                        "selected": false
+                    },
+                    {
+                        "name": "Women's",
+                        "selected": false
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "fieldType": "singleImage",
+        "id": "e4b97ad4-3292-4b50-ae4a-29078e9ded7f",
+        "fieldValue": "",
+        "name": "storeImage",
+        "isRequired": true,
+        "errorMessage": "Required",
+        "meta": {
+            "fieldLabel": "Add Store Icon",
+            "buttonLabel": "Choose File"
+        }
+    },
+    {
+        "fieldType": "singleImage",
+        "id": "82a40f4b-b133-4132-a1eb-c228ef3511c8",
+        "fieldValue": "",
+        "name": "storeImage",
+        "isRequired": true,
+        "errorMessage": "Required",
+        "meta": {
+            "fieldLabel": "Add Store Cover Image",
+            "buttonLabel": "Choose File"
+        }
+    },
+    {
+        "fieldType": "multipleImage",
+        "id": "82a40f4b-4132-b133-a1eb-c228ef3511c8",
+        "fieldValue": [],
+        "name": "storeMultipleImages",
+        "isRequired": true,
+        "errorMessage": "Required",
+        "meta": {
+            "fieldLabel": "Add More Images",
+            "buttonLabel": "Choose File"
+        }
+    },
+    {
+        "fieldType": "groupCheckbox",
+        "id": "checkbox",
+        "fieldValue": [],
+        "name": "categories",
+        "isRequired": true,
+        "errorMessage": "Required",
+        "meta": {
+            "fieldLabel": "Categories",
+            "groupOption": {
+                "name": "Categories",
+                "selected": false,
+                "listValues": [
+                    {
+                        "name": "dresses",
+                        "selected": false
+                    },
+                    {
+                        "name": "suits & tuxedos",
+                        "selected": false
+                    },
+                    {
+                        "name": "shoes",
+                        "selected": false
+                    },
+                    {
+                        "name": "accesories",
+                        "selected": false
+                    },
+                    {
+                        "name": "flowers",
+                        "selected": false
+                    },
+                    {
+                        "name": "fragnances",
+                        "selected": false
+                    },
+                    {
+                        "name": "hair",
+                        "selected": false
+                    },
+                    {
+                        "name": "makeup",
+                        "selected": false
+                    },
+                    {
+                        "name": "nails",
+                        "selected": false
+                    },
+                    {
+                        "name": "jewellery",
+                        "selected": false
+                    },
+                    {
+                        "name": "skincare",
+                        "selected": false
+                    },
+                    {
+                        "name": "tanning",
+                        "selected": false
+                    },
+                    {
+                        "name": "teethwhitening",
+                        "selected": false
+                    },
+                    {
+                        "name": "hairremoval",
+                        "selected": false
+                    },
+                    {
+                        "name": "limos",
+                        "selected": false
+                    },
+                    {
+                        "name": "cars",
+                        "selected": false
+                    },
+                    {
+                        "name": "party buses",
+                        "selected": false
+                    },
+                    {
+                        "name": "after parties",
+                        "selected": false
+                    },
+                    {
+                        "name": "themes",
+                        "selected": false
+                    },
+                    {
+                        "name": "photography",
+                        "selected": false
+                    }
+                ]
+            }
+        }
+    }
+]

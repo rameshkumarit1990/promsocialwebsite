@@ -1,0 +1,39 @@
+<div class="login-container">
+    <div class="container">
+        <mat-card class="login-form-card mx-auto">
+            <mat-card-title style="margin-bottom: 15px;">
+                <img class="mx-auto" src="../../assets/images/desktopimages/pslogofull.png" alt="image"
+                    style="width: 44%;">
+            </mat-card-title>
+            <mat-card-content style="text-align: center;" class="mt-4">
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <div class="example-container">
+                        <mat-form-field class="w-50">
+                            <mat-label>Enter your email</mat-label>
+                            <input matInput placeholder="pat@example.com" formControlName="email">
+                            <br>
+                            <div *ngIf="f.email.touched && f.email.invalid">
+                                <div *ngIf="f.email.errors.required"></div>
+                                <div *ngIf="f.email.errors.email"></div>
+                            </div>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="w-50">
+                            <mat-label>Enter your password</mat-label>
+                            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                                [attr.aria-pressed]="hide">
+                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                            <div *ngIf="f.password.touched && f.password.invalid">
+                                <div *ngIf="f.password.errors.required"></div>
+                            </div>
+                        </mat-form-field>
+                    </div>
+                    <button class="mt-5" mat-raised-button color="primary" [disabled]="!loginForm.valid"
+                        [routerLink]="['/dashboard']">Login</button>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

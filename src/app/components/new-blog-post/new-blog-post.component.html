@@ -1,0 +1,13 @@
+<mat-card class="card-container">
+    <mat-horizontal-stepper (selectionChange)="previewClicked($event)">
+        <mat-step label="Create Blog">
+            <app-create-blog></app-create-blog>
+        </mat-step>
+        <mat-step label="Desktop Preview">
+            <app-desktop-preview [desktopPreview]="preview"></app-desktop-preview>
+        </mat-step>
+        <mat-step label="Mobile Preview">
+            <app-mobile-preview [mobilePreview]="preview"></app-mobile-preview>
+        </mat-step>
+    </mat-horizontal-stepper>
+</mat-card>

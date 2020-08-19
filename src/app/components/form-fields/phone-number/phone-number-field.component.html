@@ -1,0 +1,41 @@
+<!-- <div class="question-container" [formGroup]="group" [ngClass]="{active: isSelected, interviewQuestion: interviewMode}">
+    <div class="question-header" *ngIf="!interviewMode" (click)="selectQuestion()">
+        <button type="button" class="btn btn-link float-left" (click)="expanded = !expanded">
+            <i class="fa" [ngClass]="{'fa-angle-right': !expanded, 'fa-angle-down': expanded}"></i>
+        </button>
+        <span class="question-mapkey">
+            {{config.mapKeyName}}
+        </span>
+        <span class="question-mapkey float-right pr-2">
+            {{config.answerTypeName}}
+        </span>
+    </div>
+    <div class="question-body" *ngIf="expanded">
+        <div class="question-text rendered-quill-content ql-editor" [innerHTML]="formatQuestionText(config.questionText) | safeHtml"></div>
+        <div class="help-text rendered-quill-content ql-editor" [innerHTML]="formatQuestionText(config.helpText) | safeHtml" *ngIf="config.helpText?.length"></div>
+        <div class="question-form">
+            <mat-form-field class="w-50 mr-5">
+                <input type="tel" [textMask]="{mask: mask}" matInput [placeholder]="config?.Placeholder" [formControlName]="config.id" (focus)="onFocus()"
+                    (blur)="onBlur()" [readonly]="interviewService.isReadOnly">
+                <mat-error *ngIf="group.get(config.id)?.hasError('required')">required</mat-error>
+                <mat-error *ngIf="group.get(config.id)?.hasError('pattern')">Enter Valid Phone Number *hint 10 digit 2345656895 or 282-399-2344</mat-error>
+                <mat-error *ngIf="group.get(config.id)?.hasError('validationError')">{{group.get(config.id)?.errors.validationError}}</mat-error>
+            </mat-form-field>
+            <mat-form-field class="w-40">
+                <input type="number" matInput placeholder="Enter Extension if any" (blur)="onBlur()" [formControlName]="'ext'+config.id" [readonly]="interviewService.isReadOnly">
+                <mat-hint>Optional</mat-hint>
+            </mat-form-field>
+        </div>
+        <app-field-details [question]="config" [form]="group" [readOnlyMode]="interviewService.isReadOnly"></app-field-details>
+    </div>
+</div> -->
+
+<div [formGroup]="group" class="mb-2">
+    <mat-form-field class="w-50">
+        <mat-label>{{config.meta.fieldLabel || ''}}</mat-label>
+        <input type="tel" [textMask]="{mask: mask}" matInput [placeholder]="config.placeholder"
+            [formControlName]="config.id">
+        <mat-error *ngIf="group.get(config.id)?.hasError('pattern')">Enter Valid Phone Number *hint 10 digit 2345656895
+            or 282-399-2344</mat-error>
+    </mat-form-field>
+</div>

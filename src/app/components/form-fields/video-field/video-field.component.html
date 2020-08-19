@@ -1,0 +1,25 @@
+<!-- <img [src]="url" *ngIf="format==='image' && url" height="200"> <br /> -->
+<!-- <label class="image-upload-container btn btn-bwm">
+    <span>Upload</span>
+    <input type="file" (change)="onSelectFile($event)">
+</label>
+<br> -->
+
+
+
+<div [formGroup]="group" class="my-4">
+    <div class="w-50 mx-auto field-border-bottom">
+        <div class="text-left mr-4 label-view">
+            <div>
+                <label class="btn-label mb-1">{{config.meta.fieldLabel}}</label>
+            </div>
+            <div>
+                <label class="image-upload-container btn btn-bwm">
+                    <span>{{config.meta.buttonLabel}}</span>
+                    <input type="file" (change)="onSelectFile($event)">
+                </label>
+            </div>
+        </div>
+        <video [src]="url" *ngIf="format==='video' && url" height="150" width="150" controls></video>
+    </div>
+</div>

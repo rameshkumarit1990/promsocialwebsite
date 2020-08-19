@@ -1,0 +1,59 @@
+<mat-card class="mobile-preview-container">
+    <mat-card-content>
+        <div class="mb-20" *ngIf="previewData.type ==='blog'">
+            <div>
+                <img mat-card-image src="{{previewData.coverTitleImage}}">
+            </div>
+            <div class="mobile-preview-title">{{previewData.coverTitle}}</div>
+        </div>
+        <div class="mb-20" *ngIf="previewData.type ==='image'">
+            <div class="text-center">
+                <img mat-card-image src="{{previewData.coverImage}}">
+            </div>
+            <div class="caption">{{previewData.coverImageCaption}}</div>
+        </div>
+        <div class="mb-20" *ngIf="previewData.type ==='video'">
+            <div>{{previewData.coverVideo}}</div>
+            <div class="caption" style="opacity: 0.6;">{{previewData.coverVideoCaption}}</div>
+        </div>
+        <div class="mb-20" *ngIf="previewData.type ==='link'">
+            <div class="text-center" style="margin-bottom: 10px;">
+                <a href="{{previewData.link.startsWith('http') ? previewData.link : 'https://'+previewData.link}}"
+                    target="_blank">
+                    {{previewData.link}}
+                </a>
+            </div>
+            <div class="caption">{{previewData.linkCaption}}</div>
+        </div>
+        <div *ngFor="let item of previewData.subBlog;let i=index">
+            <div *ngIf="item.subType ==='text'" class="mobile-preview-text mb-20">
+                {{item.text}}
+            </div>
+            <div class="mb-20" *ngIf="item.subType ==='subTitle'" class="mobile-preview-subtitle">
+                {{item.subTitle}}
+            </div>
+            <div class="mb-20" *ngIf="item.subType ==='image'">
+                <div>
+                    <img mat-card-image src="{{item.image}}">
+                </div>
+                <div class="caption" style="opacity: 0.6;">{{item.imageCaption}}</div>
+            </div>
+            <div class="mb-20" *ngIf="item.subType ==='video'">
+                <div>{{item.video}}</div>
+                <div class="caption" style="opacity: 0.6;">{{item.videoCaption}}</div>
+            </div>
+            <div class="mb-20" *ngIf="item.subType ==='link'" class="text-center mb-5">
+                <div style="margin-bottom: 10px;">
+                    <a href="{{item.link.startsWith('http') ? item.link : 'https://'+item.link}}"
+                        target="_blank">{{item.link}}</a>
+                </div>
+                <div class="caption" style="opacity: 0.6;">{{item.linkCaption}}</div>
+            </div>
+            <div *ngIf="item.subType ==='specificText' " class="mobile-preview-specifictext mb-5">
+                <hr>
+                {{item.specificText}}
+                <hr>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

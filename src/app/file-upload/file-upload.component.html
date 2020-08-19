@@ -1,0 +1,8 @@
+<div style="display: flex;margin-left: auto;margin-right: auto;margin-top: 30px;margin-bottom: 45px;">
+    <input type="text" disabled>
+    <button class="upload-button" mat-raised-button color="primary" (click)="fileInput.click()">Choose File</button>
+    <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
+    <!-- <div>
+        <img src="srcResult"/>
+    </div> -->
+</div>
