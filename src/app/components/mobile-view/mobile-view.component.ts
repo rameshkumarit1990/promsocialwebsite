@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MarketModalComponent } from '../market-modal/market-modal.component';
+
+import { MatDialog } from '@angular/material/dialog';
+
 import * as data from '../../config/application.json';
 
 @Component({
@@ -10,7 +14,7 @@ export class MobileViewComponent implements OnInit {
   public appData: any = [];
   public playVideo: boolean = false;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.appData = (data as any).default;
@@ -33,6 +37,13 @@ export class MobileViewComponent implements OnInit {
     // mobilePromsocialVideo.style.display = "block";
     // mobileVideo.play();
     // mobileVideo.muted = false;
+  }
+
+  showMarketModal() {
+    const dialogRef = this.dialog.open(MarketModalComponent);
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
 }

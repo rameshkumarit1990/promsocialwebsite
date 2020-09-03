@@ -11,7 +11,8 @@
     <div class="w-50 mx-auto field-border-bottom">
         <div class="text-left mr-4 label-view">
             <div>
-                <label class="btn-label mb-1">{{config.meta.fieldLabel}}</label>
+                <label class="btn-label mb-1">{{config.meta.fieldLabel}} <span *ngIf="config.isRequired"
+                        style="color: red;">*</span></label>
             </div>
             <div>
                 <label class="image-upload-container btn btn-bwm">

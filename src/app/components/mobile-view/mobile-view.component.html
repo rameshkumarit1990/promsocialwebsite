@@ -21,7 +21,8 @@
       Your browser does not support HTML5 video.
       The autoplay attribute does not work in mobile devices like iPad and iPhone.
     </video>
-    <button mat-mini-fab color="warn" aria-label="close" class="close-video" (click)="playVideo=false">
+    <button mat-mini-fab color="warn" aria-label="close" class="close-video" (click)="playVideo=false"
+      style="background-color: #e52e71;">
       <mat-icon style="font-size: 15px;">close</mat-icon>
     </button>
   </div>
@@ -46,6 +47,6 @@
   </div>
   <div class="d-inline-flex container justify-content-center mb-2 text-center footer-btns">
     <a mat-button class="mobile-button blue-button" href="https://promsocial.app.link/BN2t8fKR23">DOWNLOAD APP</a>
-    <a mat-button class="mobile-button pink-button ml-4">JOIN MARKETPLACE</a>
+    <a mat-button class="mobile-button pink-button ml-4" (click)="showMarketModal()">JOIN MARKETPLACE</a>
   </div>
 </div>

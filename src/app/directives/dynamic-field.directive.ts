@@ -11,6 +11,7 @@ import { DropdownFieldComponent } from '../components/form-fields/dropdown-field
 import { CheckboxFieldComponent } from '../components/form-fields/checkbox-field/checkbox-field.component';
 import { GroupCheckboxComponent } from '../components/form-fields/group-checkbox/group-checkbox.component';
 import { VideoFieldComponent } from '../components/form-fields/video-field/video-field.component';
+import { AddressFeildComponent } from '../components/form-fields/address-feild/address-feild.component';
 
 const components = {
     string: StringFieldComponent,
@@ -22,7 +23,8 @@ const components = {
     checkbox: CheckboxFieldComponent,
     groupCheckbox: GroupCheckboxComponent,
     video: VideoFieldComponent,
-    multipleImage: MultipleImageFieldComponent
+    multipleImage: MultipleImageFieldComponent,
+    address: AddressFeildComponent,
 };
 
 @Directive({

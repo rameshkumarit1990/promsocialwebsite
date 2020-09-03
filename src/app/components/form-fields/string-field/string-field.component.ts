@@ -14,8 +14,16 @@ export class StringFieldComponent implements OnInit {
     constructor() { }
 
     ngOnInit() {
+
         const validations = [];
-        if (this.config.isRequired) { validations.push(Validators.required); }
+        if (this.config.isRequired) {
+            validations.push(Validators.required);
+        }
+        if (this.config.isRequired && this.config.requiredPattern) {
+            // const pattern = this.config.requiredPattern;
+            validations.push(Validators.pattern(this.config.requiredPattern));
+        }
+
         this.group.get(this.config.id).setValidators(validations);
         this.group.get(this.config.id).updateValueAndValidity();
     }

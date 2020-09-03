@@ -1,0 +1,396 @@
+{
+    "contactDetails": [
+        {
+            "fieldType": "string",
+            "id": "name",
+            "placeholder": "Enter Name",
+            "name": "name",
+            "isRequired": false,
+            "errorMessage": "Required",
+            "meta": {
+                "fieldLabel": "Name"
+            }
+        },
+        {
+            "fieldType": "string",
+            "id": "email",
+            "placeholder": "Enter Email",
+            "name": "email",
+            "isRequired": false,
+            "requiredPattern": "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$",
+            "errorMessage": "Required",
+            "meta": {
+                "fieldLabel": "Email"
+            }
+        },
+        {
+            "fieldType": "phoneNumber",
+            "id": "phoneNumber",
+            "placeholder": "Enter Phone Number",
+            "fieldValue": "",
+            "name": "phoneNumber",
+            "isRequired": false,
+            "errorMessage": "Required",
+            "meta": {
+                "fieldLabel": "Phone"
+            }
+        }
+    ],
+    "storeDetails": [
+        {
+            "fieldType": "string",
+            "id": "storeName",
+            "placeholder": "Enter Name",
+            "name": "storeName",
+            "isRequired": false,
+            "errorMessage": "Required",
+            "meta": {
+                "fieldLabel": "StoreName"
+            }
+        },
+        {
+            "fieldType": "textArea",
+            "id": "description",
+            "placeholder": "Enter Description",
+            "fieldValue": "",
+            "name": "description",
+            "isRequired": false,
+            "errorMessage": "Required",
+            "meta": {
+                "fieldLabel": "Description"
+            }
+        },
+        {
+            "fieldType": "address",
+            "id": "location",
+            "placeholder": "Enter Name",
+            "name": "location",
+            "isRequired": false,
+            "errorMessage": "Required",
+            "preFillValues": {
+                "street_number": "short_name",
+                "route": "long_name",
+                "locality": "long_name",
+                "administrative_area_level_1": "short_name",
+                "country": "long_name",
+                "postal_code": "short_name"
+            },
+            "meta": {
+                "fieldLabel": "Address"
+            }
+        },
+        {
+            "fieldType": "string",
+            "id": "street_number",
+            "placeholder": "Enter Address Line1",
+            "name": "street_number",
+            "isRequired": false,
+            "isReadOnly": true,
+            "meta": {
+                "fieldLabel": "Address Line1"
+            }
+        },
+        {
+            "fieldType": "string",
+            "id": "route",
+            "placeholder": "Enter Address Line2",
+            "name": "route",
+            "isRequired": false,
+            "isReadOnly": true,
+            "meta": {
+                "fieldLabel": "Address Line2"
+            }
+        },
+        {
+            "fieldType": "string",
+            "id": "locality",
+            "placeholder": "Enter City",
+            "name": "locality",
+            "isRequired": false,
+            "isReadOnly": true,
+            "meta": {
+                "fieldLabel": "City"
+            }
+        },
+        {
+            "fieldType": "string",
+            "id": "administrative_area_level_1",
+            "placeholder": "Enter State",
+            "name": "administrative_area_level_1",
+            "isRequired": false,
+            "isReadOnly": true,
+            "meta": {
+                "fieldLabel": "State"
+            }
+        },
+        {
+            "fieldType": "string",
+            "id": "country",
+            "placeholder": "Enter Country",
+            "name": "country",
+            "isRequired": false,
+            "isReadOnly": true,
+            "meta": {
+                "fieldLabel": "Country"
+            }
+        },
+        {
+            "fieldType": "string",
+            "id": "postal_code",
+            "placeholder": "Enter Pincode",
+            "name": "postal_code",
+            "isRequired": false,
+            "isReadOnly": true,
+            "meta": {
+                "fieldLabel": "Pincode"
+            }
+        },
+        {
+            "fieldType": "string",
+            "id": "website",
+            "placeholder": "Website",
+            "name": "website",
+            "isRequired": false,
+            "errorMessage": "Required",
+            "meta": {
+                "fieldLabel": "Website"
+            }
+        },
+        {
+            "fieldType": "phoneNumber",
+            "id": "phoneNumber",
+            "placeholder": "Enter Phone Number",
+            "fieldValue": "",
+            "name": "phoneNumber",
+            "isRequired": false,
+            "errorMessage": "Required",
+            "meta": {
+                "fieldLabel": "Phone"
+            }
+        },
+        {
+            "fieldType": "dropdown",
+            "id": "costLevel",
+            "placeholder": "Cost Level",
+            "fieldValue": "",
+            "name": "costLevel",
+            "isRequired": false,
+            "errorMessage": "Required",
+            "meta": {
+                "fieldLabel": "Cost Level",
+                "options": [
+                    {
+                        "label": "one",
+                        "value": 1
+                    },
+                    {
+                        "label": "two",
+                        "value": 2
+                    },
+                    {
+                        "label": "three",
+                        "value": 3
+                    },
+                    {
+                        "label": "four",
+                        "value": 4
+                    }
+                ]
+            }
+        },
+        {
+            "fieldType": "groupCheckbox",
+            "id": "Gender",
+            "fieldValue": [],
+            "name": "Gender",
+            "isRequired": false,
+            "errorMessage": "Required",
+            "meta": {
+                "fieldLabel": "Gender",
+                "groupOption": {
+                    "name": "Gender",
+                    "selected": false,
+                    "listValues": [
+                        {
+                            "name": "Men's",
+                            "selected": false
+                        },
+                        {
+                            "name": "Women's",
+                            "selected": false
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "fieldType": "groupCheckbox",
+            "id": "categories",
+            "fieldValue": [],
+            "name": "categories",
+            "isRequired": false,
+            "errorMessage": "Required",
+            "meta": {
+                "fieldLabel": "Categories",
+                "groupOption": {
+                    "name": "Categories",
+                    "selected": false,
+                    "listValues": [
+                        {
+                            "name": "dresses",
+                            "selected": false
+                        },
+                        {
+                            "name": "suits & tuxedos",
+                            "selected": false
+                        },
+                        {
+                            "name": "shoes",
+                            "selected": false
+                        },
+                        {
+                            "name": "accesories",
+                            "selected": false
+                        },
+                        {
+                            "name": "flowers",
+                            "selected": false
+                        },
+                        {
+                            "name": "fragnances",
+                            "selected": false
+                        },
+                        {
+                            "name": "hair",
+                            "selected": false
+                        },
+                        {
+                            "name": "makeup",
+                            "selected": false
+                        },
+                        {
+                            "name": "nails",
+                            "selected": false
+                        },
+                        {
+                            "name": "jewellery",
+                            "selected": false
+                        },
+                        {
+                            "name": "skincare",
+                            "selected": false
+                        },
+                        {
+                            "name": "tanning",
+                            "selected": false
+                        },
+                        {
+                            "name": "teethwhitening",
+                            "selected": false
+                        },
+                        {
+                            "name": "hairremoval",
+                            "selected": false
+                        },
+                        {
+                            "name": "limos",
+                            "selected": false
+                        },
+                        {
+                            "name": "cars",
+                            "selected": false
+                        },
+                        {
+                            "name": "party buses",
+                            "selected": false
+                        },
+                        {
+                            "name": "after parties",
+                            "selected": false
+                        },
+                        {
+                            "name": "themes",
+                            "selected": false
+                        },
+                        {
+                            "name": "photography",
+                            "selected": false
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "fieldType": "string",
+            "id": "storeTimings",
+            "placeholder": "Enter store Timings",
+            "fieldValue": "",
+            "name": "storeTimings",
+            "isRequired": false,
+            "errorMessage": "Required",
+            "meta": {
+                "fieldLabel": "Store timings (Ex: 10am to 12pm)"
+            }
+        },
+        {
+            "fieldType": "string",
+            "id": "tags",
+            "placeholder": "Enter Tags",
+            "fieldValue": "",
+            "name": "tags",
+            "isRequired": false,
+            "errorMessage": "Required",
+            "meta": {
+                "fieldLabel": "Tags"
+            }
+        },
+        {
+            "fieldType": "string",
+            "id": "discountCode",
+            "placeholder": "Enter Discount Code",
+            "fieldValue": "",
+            "name": "discountCode",
+            "isRequired": false,
+            "errorMessage": "Required",
+            "meta": {
+                "fieldLabel": "Discount Code"
+            }
+        },
+        {
+            "fieldType": "string",
+            "id": "discountDescription",
+            "placeholder": "Enter Discount Description",
+            "fieldValue": "",
+            "name": "discountDescription",
+            "isRequired": false,
+            "errorMessage": "Required",
+            "meta": {
+                "fieldLabel": "Discount Description"
+            }
+        },
+        {
+            "fieldType": "singleImage",
+            "id": "storeIcon",
+            "fieldValue": "",
+            "name": "storeImage",
+            "isRequired": false,
+            "errorMessage": "Required",
+            "meta": {
+                "fieldLabel": "Add Store Icon",
+                "buttonLabel": "Choose File"
+            }
+        },
+        {
+            "fieldType": "multipleImage",
+            "id": "storeMultipleImages",
+            "fieldValue": [],
+            "name": "storeMultipleImages",
+            "isRequired": false,
+            "errorMessage": "Required",
+            "meta": {
+                "fieldLabel": "Add More Images",
+                "buttonLabel": "Choose File"
+            }
+        }
+    ]
+}

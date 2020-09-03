@@ -8,6 +8,8 @@ import { MaterialModule } from './material/material.module';
 import { NewBlogPostComponent } from './components/new-blog-post/new-blog-post.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TextMaskModule } from 'angular2-text-mask';
+import { MatCarouselModule } from '@ngmodule/material-carousel';
+
 
 import { FileUploadComponent } from './file-upload/file-upload.component';
 import { CreateBlogComponent } from './components/new-blog-post/create-blog/create-blog.component';
@@ -31,6 +33,8 @@ import { TermsConditionsComponent } from './components/terms-conditions/terms-co
 import { PromBlogsComponent } from './components/prom-blogs/prom-blogs.component';
 import { AddMarketStoreComponent } from './components/add-market-store/add-market-store.component';
 import { AddStoreComponent } from './components/add-store/add-store.component';
+import { GooglePlaceModule } from "ngx-google-places-autocomplete";
+
 
 import { DynamicFieldDirective } from './directives/dynamic-field.directive';
 import { DynamicFormComponent } from './components/form-fields/dynamic-form/dynamic-form.component';
@@ -45,6 +49,13 @@ import { DropdownFieldComponent } from './components/form-fields/dropdown-field/
 import { CheckboxFieldComponent } from './components/form-fields/checkbox-field/checkbox-field.component';
 import { GroupCheckboxComponent } from './components/form-fields/group-checkbox/group-checkbox.component';
 import { MultiMediaFieldComponent } from './components/form-fields/multi-media-field/multi-media-field.component';
+import { MenuContentComponent } from './components/menu-content/menu-content.component';
+import { AddressFeildComponent } from './components/form-fields/address-feild/address-feild.component';
+import { MarketStoreTermsComponent } from './components/market-store-terms/market-store-terms.component';
+import { BlogViewComponent } from './components/blog-view/blog-view.component';
+// import { StoreFormsComponent } from './store-forms/store-forms.component';
+// import { MarketStoreContactDetailsComponent } from './store-forms/market-store-contact-details/market-store-contact-details.component';
+// import { MarketStoreStoreDetailsComponent } from './store-forms/market-store-store-details/market-store-store-details.component';
 
 @NgModule({
   declarations: [
@@ -85,7 +96,14 @@ import { MultiMediaFieldComponent } from './components/form-fields/multi-media-f
     VideoFieldComponent,
     MultipleImageFieldComponent,
     GroupCheckboxComponent,
-    MultiMediaFieldComponent
+    MultiMediaFieldComponent,
+    MenuContentComponent,
+    AddressFeildComponent,
+    MarketStoreTermsComponent,
+    BlogViewComponent,
+    // StoreFormsComponent,
+    // MarketStoreContactDetailsComponent,
+    // MarketStoreStoreDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -94,7 +112,9 @@ import { MultiMediaFieldComponent } from './components/form-fields/multi-media-f
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    TextMaskModule
+    TextMaskModule,
+    GooglePlaceModule,
+    MatCarouselModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

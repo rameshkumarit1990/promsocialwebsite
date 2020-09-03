@@ -3,8 +3,9 @@
         <mat-label>{{config.meta.fieldLabel || ''}}
             <span *ngIf="config.isRequired" style="color: red;">*</span>
         </mat-label>
-        <input matInput [placeholder]="config?.placeholder" [formControlName]="config?.id"
-            [readonly]="config?.isReadOnly">
+        <!-- <input matInput [placeholder]="config?.placeholder" [formControlName]="config?.id"> -->
+        <input matInput ngx-google-places-autocomplete (onAddressChange)="AddressChange($event)"
+            [placeholder]="config?.placeholder" [formControlName]="config?.id">
         <mat-error *ngIf="group.get(config.id)?.hasError('pattern')">Please enter correctly</mat-error>
     </mat-form-field>
 

@@ -19,7 +19,7 @@ export class AddStoreComponent implements OnInit {
   }
 
   saveStoreForm() {
-    const dynamicForm = this.appService.getDynamicForm();
+    const dynamicForm = this.appService.getDynamicForm("formName");
     console.log(dynamicForm.value);
   }
 }

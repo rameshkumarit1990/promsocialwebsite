@@ -11,8 +11,9 @@ import { AppService } from '../../../app.service';
 export class DynamicFormComponent implements OnInit {
 
     private _config: any[] = [];
-
+    private _formName: any;
     form: FormGroup;
+
     constructor(private fb: FormBuilder, public appService: AppService) {
     }
 
@@ -30,10 +31,18 @@ export class DynamicFormComponent implements OnInit {
     }
 
     @Input()
+    set formName(name) {
+        this._formName = name;
+    }
+    get formName() {
+        return this._formName;
+    }
+
+    @Input()
     set config(storeData) {
         this._config = storeData;
         this.form = this.createGroup();
-        this.appService.setDynamicForm(this.form);
+        this.appService.setDynamicForm(this.form, this._formName);
         for (const eachQuestion of storeData) {
             if (this.form.get(eachQuestion.id)) {
                 if (eachQuestion.errorData) {

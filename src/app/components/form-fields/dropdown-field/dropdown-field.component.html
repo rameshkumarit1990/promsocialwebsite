@@ -1,6 +1,7 @@
 <div [formGroup]="group">
     <mat-form-field class="w-50">
-        <mat-label>{{config.meta.fieldLabel || ''}}</mat-label>
+        <mat-label>{{config.meta.fieldLabel || ''}} <span *ngIf="config.isRequired" style="color: red;">*</span>
+        </mat-label>
         <mat-select [formControlName]="config?.id">
             <mat-option *ngFor="let option of config.meta.options" [value]="option.value">{{option.label}}</mat-option>
         </mat-select>

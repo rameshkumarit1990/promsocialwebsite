@@ -14,6 +14,8 @@ import { MatRippleModule } from '@angular/material/core';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 const MaterialComponents = [
   MatStepperModule,
@@ -30,7 +32,9 @@ const MaterialComponents = [
   MatRippleModule,
   MatDialogModule,
   MatCheckboxModule,
-  MatDividerModule
+  MatDividerModule,
+  MatMenuModule,
+  MatExpansionModule
 ];
 
 @NgModule({

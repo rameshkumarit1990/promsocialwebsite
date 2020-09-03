@@ -2,12 +2,16 @@
   <!-- first-slide-view -->
   <div class="container-fluid first-slide-background" (click)="playPromVideo = false;">
     <div class="row">
-      <div class="col-xs-12 col-sm-3 offset-sm-9 move-right-animation p-4 text-center">
-        <img src="../../assets/images/desktopimages/logo.png" alt="Image" style="width: 16vw;" />
+      <div class="col-sm-1">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" (click)="showMenu()"
+          style="color: #fff;font-size: 40px;margin-top: 2vh;cursor: pointer;">menu</mat-icon>
+      </div>
+      <div class="col-xs-12 col-sm-3 offset-sm-8 move-right-animation pt-3 pl-5 text-center" @zoomIn>
+        <img src="../../assets/images/desktopimages/logo.png" alt="Image" style="width: 12vw;" />
       </div>
     </div>
-    <div class="row ">
-      <div class="col-6 offset-1 vertical-animation">
+    <div class="row mt-4">
+      <div class="col-6 offset-1 vertical-animation mt-5" @moveRight>
         <div class="large-text">Plan Prom
           <br>With Your Freinds
         </div>
@@ -21,9 +25,9 @@
           </div>
         </div>
       </div>
-      <div class="col-3" style="position: relative;">
+      <div class="col-3" style="position: relative;" @moveLeft>
         <img *ngIf="!playPromVideo" class="fade-animation" src="../../assets/images/desktopimages/splashPhone.png"
-          alt="image" style="width: 300px;position: absolute;top: 20%;">
+          alt="image" style="width: 300px;position: absolute;top: 0;">
         <video *ngIf="playPromVideo" controls autoplay muted (ended)="playPromVideo = false" class="first-slide-video">
           <source src="../../assets/videos/promsocial.mp4" type="video/mp4">
           Your browser does not support HTML5 video.

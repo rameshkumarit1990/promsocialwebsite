@@ -1,46 +1,14 @@
-<div id="contact-details" style="text-align: center;" [formGroup]="storeForm">
-
-    <div class="example-container">
-        <div formGroupName="contactDetails">
-            <mat-form-field class="w-50">
-                <mat-label>Name</mat-label>
-                <input matInput placeholder="Enter your Name" formControlName="name">
-                <!-- <div *ngIf="form.name.touched && form.name.invalid">
-                    <div *ngIf="form.name.errors.required"></div>
-                </div> -->
-            </mat-form-field>
-        </div>
-        <br>
-
-        <div formGroupName="contactDetails">
-            <mat-form-field class="w-50">
-                <mat-label>Email</mat-label>
-                <input matInput placeholder="pat@example.com" formControlName="email">
-                <br>
-                <!-- <div *ngIf="form.email.touched && form.email.invalid">
-                    <div *ngIf="form.email.errors.required"></div>
-                    <div *ngIf="form.email.errors.email"></div>
-                </div> -->
-            </mat-form-field>
-        </div>
-        <br>
-
-        <div formGroupName="contactDetails">
-            <mat-form-field class="w-50">
-                <mat-label>Phone</mat-label>
-                <input matInput formControlName="phone">
-                <!-- <div *ngIf="form.phone.touched && form.phone.invalid">
-                    <div *ngIf="form.phone.errors.required"></div>
-                    <div *ngIf="form.phone.errors.phone"></div>
-                </div> -->
-            </mat-form-field>
-        </div>
-        <br>
-    </div>
-    <button mat-raised-button class="blue-button mx-auto" type="button" matStepperNext
-        (click)="step1Submitted()">Next</button>
-    <!-- <div class="py-5 w-50 mx-auto">
-            <button mat-button class="float-right blue-button" onclick="contactInfoNext()">Next</button>
-        </div> -->
-
+<div class="container">
+    <mat-card class="text-center">
+        <dynamic-form *ngIf="marketStoreData?.length; else noDataForm" formName="contactDetails"
+            [config]="marketStoreData">
+        </dynamic-form>
+        <button mat-raised-button class="blue-button mx-auto" type="button" matStepperNext>Next</button>
+    </mat-card>
 </div>
+
+<ng-template #noDataForm>
+    <div class="p-4 text-center text-muted">
+        <h6>Form not Loaded</h6>
+    </div>
+</ng-template>

@@ -1,6 +1,7 @@
 <div [formGroup]="group" class="mb-2">
     <mat-form-field class="w-50">
-        <mat-label>{{config.meta.fieldLabel || ''}}</mat-label>
+        <mat-label>{{config.meta.fieldLabel || ''}} <span *ngIf="config.isRequired" style="color: red;">*</span>
+        </mat-label>
         <textarea matInput [placeholder]="config?.placeholder" [formControlName]="config?.id"></textarea>
     </mat-form-field>
 </div>

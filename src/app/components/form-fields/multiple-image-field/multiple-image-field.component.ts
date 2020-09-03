@@ -66,7 +66,7 @@ export class MultipleImageFieldComponent implements OnInit {
       image.onload = function () {
         me.imageString = reader.result;
         me.selectedFiles[index]['src'] = reader.result;
-        // me.group.get(me.config.id).setValue(me.imageString);
+        me.group.get(me.config.id).setValue(me.selectedFiles);
         // var height = this['height'];
         // var width = this['width'];
         // if ((height >= 150 && width >= 150) && (height <= 500 && width <= 500)) {
