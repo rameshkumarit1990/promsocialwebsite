@@ -7,7 +7,7 @@ import { AppService } from "../../app.service";
   templateUrl: './add-store.component.html',
   styleUrls: ['./add-store.component.scss']
 })
-export class AddStoreComponent implements OnInit {
+export class AddStoreComponent {
 
   storeData: any = [];
 
@@ -15,8 +15,8 @@ export class AddStoreComponent implements OnInit {
     this.storeData = (data as any).default;
   }
 
-  ngOnInit(): void {
-  }
+  // ngOnInit(): void {
+  // }
 
   saveStoreForm() {
     const dynamicForm = this.appService.getDynamicForm("formName");

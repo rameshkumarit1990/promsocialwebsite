@@ -7,11 +7,13 @@ import { FormBuilder, FormGroup, FormArray, FormControl, Validators } from '@ang
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
   // loginForm: FormGroup;
   hide = true;
   email = new FormControl('', [Validators.required, Validators.email]);
+
+  constructor() { }
 
   loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -26,8 +28,6 @@ export class LoginComponent implements OnInit {
     console.log(this.loginForm.value);
   }
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  // ngOnInit(): void {
+  // }
 }

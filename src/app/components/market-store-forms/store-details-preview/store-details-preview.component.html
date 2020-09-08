@@ -16,7 +16,9 @@
                                 *ngFor="let selectedImage of previewData?.value?.storeMultipleImages; let i = index"
                                 overlayColor="#00000040" [hideOverlay]="true">
                                 <div>
-                                    <img src="{{selectedImage.src}}" />
+                                    <!-- <img src="{{selectedImage.src}}" /> -->
+                                    <div class="img-preview"
+                                        [ngStyle]="{'background-image': 'url('+ selectedImage.src + ')'}"></div>
                                 </div>
                             </mat-carousel-slide>
                         </mat-carousel>
@@ -101,7 +103,9 @@
                     <span class="mx-3 preview-content">
                         <!-- {{storeInformationPreview.website}} -->
                         <!-- {{storeForm.get('storeInformation').get('website').value}} -->
-                        <a href="">{{previewData?.value?.website}}</a>
+                        <!-- <a href="">{{previewData?.value?.website}}</a> -->
+                        <a href="{{previewData?.value?.website.startsWith('http') ? previewData?.value?.website : 'https://'+previewData?.value?.website}}"
+                            target="_blank">{{previewData?.value?.website}}</a>
                     </span>
                 </div>
                 <div class="discount-box mb-4">

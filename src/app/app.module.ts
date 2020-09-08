@@ -29,9 +29,7 @@ import { MarketStoreFormsComponent } from './components/market-store-forms/marke
 import { ContactDetailsComponent } from './components/market-store-forms/contact-details/contact-details.component';
 import { StoreDetailsComponent } from './components/market-store-forms/store-details/store-details.component';
 import { StoreDetailsPreviewComponent } from './components/market-store-forms/store-details-preview/store-details-preview.component';
-import { TermsConditionsComponent } from './components/terms-conditions/terms-conditions.component';
 import { PromBlogsComponent } from './components/prom-blogs/prom-blogs.component';
-import { AddMarketStoreComponent } from './components/add-market-store/add-market-store.component';
 import { AddStoreComponent } from './components/add-store/add-store.component';
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 
@@ -53,6 +51,11 @@ import { MenuContentComponent } from './components/menu-content/menu-content.com
 import { AddressFeildComponent } from './components/form-fields/address-feild/address-feild.component';
 import { MarketStoreTermsComponent } from './components/market-store-terms/market-store-terms.component';
 import { BlogViewComponent } from './components/blog-view/blog-view.component';
+import { ImageVideoFieldComponent } from './components/form-fields/image-video-field/image-video-field.component';
+import { StoresComponent } from './components/stores/stores.component';
+import { SearchBarDirective } from './directives/search-bar.directive';
+import { TermsComponent } from './components/terms/terms.component';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 // import { StoreFormsComponent } from './store-forms/store-forms.component';
 // import { MarketStoreContactDetailsComponent } from './store-forms/market-store-contact-details/market-store-contact-details.component';
 // import { MarketStoreStoreDetailsComponent } from './store-forms/market-store-store-details/market-store-store-details.component';
@@ -79,9 +82,7 @@ import { BlogViewComponent } from './components/blog-view/blog-view.component';
     ContactDetailsComponent,
     StoreDetailsComponent,
     StoreDetailsPreviewComponent,
-    TermsConditionsComponent,
     PromBlogsComponent,
-    AddMarketStoreComponent,
     AddStoreComponent,
 
     DynamicFieldDirective,
@@ -101,6 +102,11 @@ import { BlogViewComponent } from './components/blog-view/blog-view.component';
     AddressFeildComponent,
     MarketStoreTermsComponent,
     BlogViewComponent,
+    ImageVideoFieldComponent,
+    StoresComponent,
+    SearchBarDirective,
+    TermsComponent,
+    PrivacyPolicyComponent,
     // StoreFormsComponent,
     // MarketStoreContactDetailsComponent,
     // MarketStoreStoreDetailsComponent

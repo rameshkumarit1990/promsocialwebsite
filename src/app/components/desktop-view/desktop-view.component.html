@@ -3,15 +3,15 @@
   <div class="container-fluid first-slide-background" (click)="playPromVideo = false;">
     <div class="row">
       <div class="col-sm-1">
-        <mat-icon aria-hidden="false" aria-label="Example home icon" (click)="showMenu()"
-          style="color: #fff;font-size: 40px;margin-top: 2vh;cursor: pointer;">menu</mat-icon>
+        <mat-icon (click)="showMenu()" style="color: #fff;font-size: 2.5rem;margin-top: 2vh;cursor: pointer;">menu
+        </mat-icon>
       </div>
-      <div class="col-xs-12 col-sm-3 offset-sm-8 move-right-animation pt-3 pl-5 text-center" @zoomIn>
+      <div class="col-xs-12 col-sm-3 offset-sm-8 pt-3 pl-5 text-center" @zoomIn>
         <img src="../../assets/images/desktopimages/logo.png" alt="Image" style="width: 12vw;" />
       </div>
     </div>
     <div class="row mt-4">
-      <div class="col-6 offset-1 vertical-animation mt-5" @moveRight>
+      <div class="col-6 offset-1 mt-5" @moveRight>
         <div class="large-text">Plan Prom
           <br>With Your Freinds
         </div>
@@ -27,7 +27,7 @@
       </div>
       <div class="col-3" style="position: relative;" @moveLeft>
         <img *ngIf="!playPromVideo" class="fade-animation" src="../../assets/images/desktopimages/splashPhone.png"
-          alt="image" style="width: 300px;position: absolute;top: 0;">
+          alt="image" style="width: 48vmin;position: absolute;top: 0;">
         <video *ngIf="playPromVideo" controls autoplay muted (ended)="playPromVideo = false" class="first-slide-video">
           <source src="../../assets/videos/promsocial.mp4" type="video/mp4">
           Your browser does not support HTML5 video.
@@ -90,12 +90,12 @@
         <div class="small-text right-slide-text-alignment">
           {{content.rightSmalltext}}
         </div>
-        <div class="d-flex justify-content-around mt-4">
-          <button *ngIf="i==0" mat-raised-button class="desktop-button blue-button"
+        <div class="float-right mt-3">
+          <button *ngIf="i==0" mat-raised-button class="desktop-button pink-button"
             routerLink="/promsocialBlogs">Promsocial
             Blogs</button>
-          <button *ngIf="i==0" mat-raised-button class="desktop-button pink-button" routerLink="/dashboard">Create
-            Blog</button>
+          <!-- <button *ngIf="i==0" mat-raised-button class="desktop-button pink-button" routerLink="/dashboard">Create
+            Blog</button> -->
         </div>
       </div>
       <div class="col-3 offset-1  my-auto ">

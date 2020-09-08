@@ -15,14 +15,4 @@ export class WebsiteComponent implements OnInit {
     this.isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     console.log(this.isMobile);
   }
-  // showMenu() {
-  //   const dialogRef = this.dialog.open(MenuContentComponent, {
-  //     maxWidth: '100vw',
-  //     maxHeight: '100vh',
-  //     height: '80vh',
-  //     width: '100vw',
-  //     position: { left: '0', top: '0' }
-  //   });
-
-  // }
 }

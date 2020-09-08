@@ -6,7 +6,7 @@ import { MatCarousel, MatCarouselComponent } from '@ngmodule/material-carousel';
   templateUrl: './blog-view.component.html',
   styleUrls: ['./blog-view.component.scss']
 })
-export class BlogViewComponent implements OnInit {
+export class BlogViewComponent {
 
 
   slides = [
@@ -19,7 +19,7 @@ export class BlogViewComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  // ngOnInit(): void {
+  // }
 
 }

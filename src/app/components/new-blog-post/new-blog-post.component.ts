@@ -7,7 +7,7 @@ import { BlogFormService } from '../../blog-form.service';
   templateUrl: './new-blog-post.component.html',
   styleUrls: ['./new-blog-post.component.scss']
 })
-export class NewBlogPostComponent implements OnInit {
+export class NewBlogPostComponent {
 
   stepLevel: any;
   public preview = {
@@ -40,7 +40,7 @@ export class NewBlogPostComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
-  }
+  // ngOnInit(): void {
+  // }
 
 }

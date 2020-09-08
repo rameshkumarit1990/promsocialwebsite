@@ -10,7 +10,7 @@ import { BlogFormService } from '../../../blog-form.service';
   templateUrl: './create-blog.component.html',
   styleUrls: ['./create-blog.component.scss']
 })
-export class CreateBlogComponent implements OnInit {
+export class CreateBlogComponent {
 
   blogForm: any;
   blogType: any;
@@ -18,6 +18,39 @@ export class CreateBlogComponent implements OnInit {
   stepLevel: any;
   blogs: any;
   companyLogo: any;
+  config: any = {
+    coverTitleImage: {
+      id: "coverTitleImage",
+      fieldValue: "",
+      mode: 'image/*',
+      meta: {
+        fieldLabel: "Add Image",
+        buttonLabel: "Choose File",
+        width: "w-60"
+      }
+    },
+    coverImage: {
+      id: "coverImage",
+      fieldValue: "",
+      mode: 'image/*',
+      meta: {
+        fieldLabel: "Add Image",
+        buttonLabel: "Choose File",
+        width: "w-60"
+      }
+    },
+    coverVideo: {
+      id: "coverVideo",
+      fieldValue: "",
+      mode: 'video/*',
+      meta: {
+        fieldLabel: "Add Video",
+        buttonLabel: "Choose File",
+        width: "w-60"
+      }
+    }
+  };
+
   constructor(private formBuilder: FormBuilder, private router: Router, public blogFormService: BlogFormService) {
     this.blogForm = this.formBuilder.group({
       type: '',
@@ -126,7 +159,7 @@ export class CreateBlogComponent implements OnInit {
 
 
 
-  ngOnInit(): void {
-  }
+  // ngOnInit(): void {
+  // }
 
 }

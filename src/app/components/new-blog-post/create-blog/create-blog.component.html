@@ -18,7 +18,7 @@
                 </mat-form-field>
                 <div>
                     <!-- <input type="file" id="myFile" name="filename" formControlName="coverTitleImage"> -->
-                    <div class="client-image-container">
+                    <!-- <div class="client-image-container">
                         <input type="hidden" formControlName="coverTitleImage">
                         <img alt="" class="company-logo" src="{{blogForm.value['coverTitleImage']}}">
                         <div class="camera-icon-layer">
@@ -27,13 +27,15 @@
                                     (change)="uploadImage($event, 'BaseOne', 'coverTitleImage')" />
                             </span>
                         </div>
-                    </div>
+                    </div> -->
+
+                    <image-video-field [group]="blogForm" [config]="config?.coverTitleImage"></image-video-field>
                 </div>
             </div>
             <div *ngIf="blogType=='image'">
                 <div>
                     <!-- <input type="file" id="myFile" name="filename" formControlName="coverImage"> -->
-                    <div class="client-image-container">
+                    <!-- <div class="client-image-container">
                         <input type="hidden" formControlName="coverImage">
                         <img alt="" class="company-logo" src="{{blogForm.value['coverImage']}}">
                         <div class="camera-icon-layer">
@@ -42,7 +44,8 @@
                                     (change)="uploadImage($event, 'Base', 'coverImage')" />
                             </span>
                         </div>
-                    </div>
+                    </div> -->
+                    <image-video-field [group]="blogForm" [config]="config?.coverImage"></image-video-field>
                 </div>
                 <mat-form-field>
                     <mat-label>Caption</mat-label>
@@ -50,9 +53,10 @@
                 </mat-form-field>
             </div>
             <div *ngIf="blogType=='video'">
-                <div>
+                <!-- <div>
                     <input type="file" id="myFile" name="filename" formControlName="coverVideo" autocomplete="off">
-                </div>
+                </div> -->
+                <image-video-field [group]="blogForm" [config]="config?.coverVideo"></image-video-field>
                 <mat-form-field>
                     <mat-label>Caption</mat-label>
                     <input matInput formControlName="coverVideoCaption" placeholder="Caption" autocomplete="off">
@@ -156,6 +160,8 @@
                     New</button>
                 <button type="submit" class="pink-button" mat-raised-button color="primary"
                     (click)="onFormSubmit(blogForm.value)">Preview</button>
+                <button type="submit" class="blue-button" mat-raised-button color="primary"
+                    (click)="onFormSubmit(blogForm.value)">Submit</button>
             </div>
         </form>
     </mat-card-content>

@@ -1,15 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-market-modal',
   templateUrl: './market-modal.component.html',
   styleUrls: ['./market-modal.component.scss']
 })
-export class MarketModalComponent implements OnInit {
+export class MarketModalComponent {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {
+  openMarketSubscriptionPage() {
+    this.router.navigate(['/subscription']);
   }
+
+  // ngOnInit(): void {
+  // }
 
 }

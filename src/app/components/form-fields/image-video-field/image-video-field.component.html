@@ -1,0 +1,21 @@
+<div class="my-4">
+    <div class="mx-auto field-border-bottom" [ngClass]="config.meta.width">
+        <div class="text-left mr-4 label-view">
+            <div>
+                <label class="btn-label mb-1">{{config.meta.fieldLabel}} <span *ngIf="config.isRequired"
+                        style="color: red;">*</span></label>
+            </div>
+            <div>
+                <label class="image-upload-container btn btn-bwm">
+                    <span>{{config.meta.buttonLabel}}</span>
+                    <input type="file" accept={{config.mode}} (change)="onSelectFile($event)">
+                </label>
+            </div>
+        </div>
+        <div class="img-preview-container mt-2" *ngIf="format==='image/jpeg' && base64String !==''">
+            <div class="img-preview" [ngStyle]="{'background-image': 'url('+ base64String + ')'}"></div>
+        </div>
+        <video *ngIf="format==='video/mp4' && base64String" [src]="base64String" height="150" width="150"
+            controls></video>
+    </div>
+</div>

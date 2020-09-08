@@ -191,3 +191,13 @@ body {
 .justify-space-evenly {
     justify-content: space-evenly;
 }
+mat-carousel{
+    .carousel {
+        ul{
+        height: 300px !important;
+        }
+    }
+}
+.w-60 {
+    width: 60%;
+}

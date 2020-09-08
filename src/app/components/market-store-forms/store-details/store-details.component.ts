@@ -10,7 +10,7 @@ import * as data from '../../../config/marketStore.json';
   templateUrl: './store-details.component.html',
   styleUrls: ['./store-details.component.scss']
 })
-export class StoreDetailsComponent implements OnInit {
+export class StoreDetailsComponent {
 
   marketStoreData: any;
   group: FormGroup;
@@ -26,8 +26,8 @@ export class StoreDetailsComponent implements OnInit {
     this.marketStoreData = jsonData.storeDetails;
   }
 
-  ngOnInit(): void {
-  }
+  // ngOnInit(): void {
+  // }
 
   // step2Submitted() {
 

@@ -19,10 +19,6 @@ import { motion } from 'src/app/animations';
 })
 export class DesktopViewComponent {
 
-
-
-
-
   // scroll= window.requestAnimationFrame || function(callback) {window.setTimeout(callback,1000/60)};
   // elementsToShow = document.querySelectorAll('.show-on-scroll');
   // loop() {
@@ -56,8 +52,6 @@ export class DesktopViewComponent {
 
 
   playPromVideo: boolean;
-  // elementsToShow:[];
-
   desktopView: any = [];
 
 
@@ -71,12 +65,6 @@ export class DesktopViewComponent {
       event.stopPropagation();
     }
   }
-
-  // showMarketModal() {
-  //   const marketDirectoryVideo = document.getElementById("marketDirectoryVideo");
-  //   marketDirectoryVideo['muted'] = false;
-  //   marketDirectoryVideo['currentTime'] = 0.0000;
-  // }
 
   hideMarketModal(event) {
     if (event.target.classList.contains('show')) {
@@ -100,7 +88,7 @@ export class DesktopViewComponent {
 
       maxWidth: '100vw',
       maxHeight: '100vh',
-      // height: '65vh',
+      height: '60vh',
       width: '100vw',
       position: { left: '0', top: '0' }
     });

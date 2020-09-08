@@ -10,7 +10,7 @@
 }
 
 .preview-title {
-    width         : 280px;
+    width         : 23vw;
     margin-top    : 30px;
     text-transform: uppercase;
     font-weight   : bold;
@@ -43,7 +43,7 @@
     justify-content: center;
     align-items    : center;
     background     : linear-gradient(to bottom right, #4757fa, #5a38ef);
-    width          : 212px;
+    // width          : 212px;
     min-height     : 123px;
     border-radius  : 20px;
     color          : white;
@@ -64,4 +64,10 @@
     width      : 10%;
     margin-top : 5px;
     margin-left: 10px;
+}
+.img-preview {
+    height:400px;
+    width:100%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }

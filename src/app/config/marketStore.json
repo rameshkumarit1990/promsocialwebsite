@@ -5,7 +5,7 @@
             "id": "name",
             "placeholder": "Enter Name",
             "name": "name",
-            "isRequired": false,
+            "isRequired": true,
             "errorMessage": "Required",
             "meta": {
                 "fieldLabel": "Name"
@@ -16,7 +16,7 @@
             "id": "email",
             "placeholder": "Enter Email",
             "name": "email",
-            "isRequired": false,
+            "isRequired": true,
             "requiredPattern": "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$",
             "errorMessage": "Required",
             "meta": {
@@ -29,7 +29,7 @@
             "placeholder": "Enter Phone Number",
             "fieldValue": "",
             "name": "phoneNumber",
-            "isRequired": false,
+            "isRequired": true,
             "errorMessage": "Required",
             "meta": {
                 "fieldLabel": "Phone"
@@ -42,7 +42,7 @@
             "id": "storeName",
             "placeholder": "Enter Name",
             "name": "storeName",
-            "isRequired": false,
+            "isRequired": true,
             "errorMessage": "Required",
             "meta": {
                 "fieldLabel": "StoreName"
@@ -54,7 +54,7 @@
             "placeholder": "Enter Description",
             "fieldValue": "",
             "name": "description",
-            "isRequired": false,
+            "isRequired": true,
             "errorMessage": "Required",
             "meta": {
                 "fieldLabel": "Description"
@@ -65,7 +65,7 @@
             "id": "location",
             "placeholder": "Enter Name",
             "name": "location",
-            "isRequired": false,
+            "isRequired": true,
             "errorMessage": "Required",
             "preFillValues": {
                 "street_number": "short_name",
@@ -84,7 +84,7 @@
             "id": "street_number",
             "placeholder": "Enter Address Line1",
             "name": "street_number",
-            "isRequired": false,
+            "isRequired": true,
             "isReadOnly": true,
             "meta": {
                 "fieldLabel": "Address Line1"
@@ -95,7 +95,7 @@
             "id": "route",
             "placeholder": "Enter Address Line2",
             "name": "route",
-            "isRequired": false,
+            "isRequired": true,
             "isReadOnly": true,
             "meta": {
                 "fieldLabel": "Address Line2"
@@ -106,7 +106,7 @@
             "id": "locality",
             "placeholder": "Enter City",
             "name": "locality",
-            "isRequired": false,
+            "isRequired": true,
             "isReadOnly": true,
             "meta": {
                 "fieldLabel": "City"
@@ -117,7 +117,7 @@
             "id": "administrative_area_level_1",
             "placeholder": "Enter State",
             "name": "administrative_area_level_1",
-            "isRequired": false,
+            "isRequired": true,
             "isReadOnly": true,
             "meta": {
                 "fieldLabel": "State"
@@ -128,7 +128,7 @@
             "id": "country",
             "placeholder": "Enter Country",
             "name": "country",
-            "isRequired": false,
+            "isRequired": true,
             "isReadOnly": true,
             "meta": {
                 "fieldLabel": "Country"
@@ -139,21 +139,10 @@
             "id": "postal_code",
             "placeholder": "Enter Pincode",
             "name": "postal_code",
-            "isRequired": false,
+            "isRequired": true,
             "isReadOnly": true,
             "meta": {
                 "fieldLabel": "Pincode"
-            }
-        },
-        {
-            "fieldType": "string",
-            "id": "website",
-            "placeholder": "Website",
-            "name": "website",
-            "isRequired": false,
-            "errorMessage": "Required",
-            "meta": {
-                "fieldLabel": "Website"
             }
         },
         {
@@ -162,10 +151,21 @@
             "placeholder": "Enter Phone Number",
             "fieldValue": "",
             "name": "phoneNumber",
-            "isRequired": false,
+            "isRequired": true,
             "errorMessage": "Required",
             "meta": {
                 "fieldLabel": "Phone"
+            }
+        },
+        {
+            "fieldType": "string",
+            "id": "website",
+            "placeholder": "Website",
+            "name": "website",
+            "isRequired": true,
+            "errorMessage": "Required",
+            "meta": {
+                "fieldLabel": "Website"
             }
         },
         {
@@ -174,7 +174,7 @@
             "placeholder": "Cost Level",
             "fieldValue": "",
             "name": "costLevel",
-            "isRequired": false,
+            "isRequired": true,
             "errorMessage": "Required",
             "meta": {
                 "fieldLabel": "Cost Level",
@@ -203,7 +203,7 @@
             "id": "Gender",
             "fieldValue": [],
             "name": "Gender",
-            "isRequired": false,
+            "isRequired": true,
             "errorMessage": "Required",
             "meta": {
                 "fieldLabel": "Gender",
@@ -228,7 +228,7 @@
             "id": "categories",
             "fieldValue": [],
             "name": "categories",
-            "isRequired": false,
+            "isRequired": true,
             "errorMessage": "Required",
             "meta": {
                 "fieldLabel": "Categories",
@@ -326,7 +326,7 @@
             "placeholder": "Enter store Timings",
             "fieldValue": "",
             "name": "storeTimings",
-            "isRequired": false,
+            "isRequired": true,
             "errorMessage": "Required",
             "meta": {
                 "fieldLabel": "Store timings (Ex: 10am to 12pm)"
@@ -338,7 +338,7 @@
             "placeholder": "Enter Tags",
             "fieldValue": "",
             "name": "tags",
-            "isRequired": false,
+            "isRequired": true,
             "errorMessage": "Required",
             "meta": {
                 "fieldLabel": "Tags"
@@ -350,7 +350,7 @@
             "placeholder": "Enter Discount Code",
             "fieldValue": "",
             "name": "discountCode",
-            "isRequired": false,
+            "isRequired": true,
             "errorMessage": "Required",
             "meta": {
                 "fieldLabel": "Discount Code"
@@ -362,7 +362,7 @@
             "placeholder": "Enter Discount Description",
             "fieldValue": "",
             "name": "discountDescription",
-            "isRequired": false,
+            "isRequired": true,
             "errorMessage": "Required",
             "meta": {
                 "fieldLabel": "Discount Description"
@@ -373,7 +373,7 @@
             "id": "storeIcon",
             "fieldValue": "",
             "name": "storeImage",
-            "isRequired": false,
+            "isRequired": true,
             "errorMessage": "Required",
             "meta": {
                 "fieldLabel": "Add Store Icon",
@@ -385,7 +385,7 @@
             "id": "storeMultipleImages",
             "fieldValue": [],
             "name": "storeMultipleImages",
-            "isRequired": false,
+            "isRequired": true,
             "errorMessage": "Required",
             "meta": {
                 "fieldLabel": "Add More Images",
