@@ -9,20 +9,20 @@
 
 .blog-cover-image {
     background-color: #fafafa;
-   
+
 }
 
 .blog-search-input {
-    position     : absolute;
-    right        : 90px;
-    top          : 10px;
-    background   : #fff;
-    width        : 200px;
-    padding      : 0 12px;
+    position: absolute;
+    right: 90px;
+    top: 10px;
+    background: #fff;
+    width: 200px;
+    padding: 0 12px;
     border-radius: 50px;
-    box-shadow   : 0 0 3px #d2d2d2;
-    z-index      : 5;
-    height       : 50px;
+    box-shadow: 0 0 3px #d2d2d2;
+    z-index: 5;
+    height: 50px;
 }
 
 .mat-form-field-appearance-outline .mat-form-field-outline {
@@ -30,20 +30,20 @@
 }
 
 .card-container {
-    
+
     background: transparent;
     border: 1px solid transparent;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.80), 0 6px 6px rgba(0,0,0,0.50);
+    // box-shadow: 0 10px 20px rgba(0,0,0,0.80), 0 6px 6px rgba(0,0,0,0.50);
     border-radius: 5px;
     margin: 1rem auto;
     height: 8vh;
     padding: 4px;
     // transform: skewX(-10deg);
-    
+
     &:hover {
-      box-shadow: 0 10px 35px rgba(0,0,0,0.80), 0 10px 10px rgba(0,0,0,0.50);
-      background: #3F51B5;
-      transform: translateZ(-1.5rem);
-    
+        // box-shadow: 0 10px 35px rgba(0, 0, 0, 0.80), 0 10px 10px rgba(0, 0, 0, 0.50);
+        background: #3F51B5;
+        transform: translateZ(-1.5rem);
+
     }
-  }
+}

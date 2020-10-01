@@ -1,0 +1,64 @@
+div,
+p {
+    letter-spacing: 0.01rem;
+
+}
+
+.blog-cover-image {
+    // background: linear-gradient(90deg, rgba(255, 171, 27, 0.7), rgba(245, 0, 140, 0.7), rgba(95, 78, 174, 0.7)), url(../../../assets/images/desktopimages/firstscreen.jpg);
+    // height    : 280px;
+    // background: rgb(63, 94, 251);
+    // background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    background: #C04848;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #480048, #C04848);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #480048, #C04848);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+.blog-logo {
+    height: 80px;
+    // width          : 140px;
+    // display     : block;
+    // margin-left : auto;
+    // margin-right: auto;
+
+}
+
+.blog-logo-title {
+    text-align: center;
+    font-size: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.blog {
+    transition: transform .3s;
+
+    &_card-image {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &_card-title {
+        font-family: GothamMedium;
+        font-size: 23px;
+        line-height: 28px;
+        color: black;
+    }
+
+    &:hover {
+        transform: translateZ(-1.5rem) scale(1.03);
+
+    }
+
+}
+
+// mat-form-field-flex{
+//     background: #fff!important;
+// }

@@ -11,8 +11,21 @@
 </div> -->
 <div style="height: 100vh;overflow: auto">
     <div class="blog-cover-image">
-        <div style="position: relative; " class="mb-5">
-            <img class="blog-logo ml-3 mt-4" src="../../../assets/images/desktopimages/logo.png">
+        <div style="position: relative;" class="mb-5">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <img class="blog-logo ml-3 mt-4" src="../../../assets/images/desktopimages/logo.png">
+                </div>
+                <div class="m-5 d-flex" style="width: 22%;">
+                    <mat-form-field style="width: 100%;" class="blog-input">
+                        <input matInput placeholder="Search" autocomplete="off" (keyup)="applyFilter($event)">
+                        <button mat-icon-button matSuffix>
+                            <mat-icon>search</mat-icon>
+                        </button>
+                    </mat-form-field>
+                    <!-- <mat-icon>search</mat-icon> -->
+                </div>
+            </div>
             <div class="blog-logo-title mt-3 fade-animation" style="color: #fff;">
                 PROM Updates for amazing prom Experience<br>
                 <span style="font-size: 20px;">...especially for you</span>

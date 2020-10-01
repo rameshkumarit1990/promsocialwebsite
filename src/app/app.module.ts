@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { NewBlogPostComponent } from './components/new-blog-post/new-blog-post.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TextMaskModule } from 'angular2-text-mask';
@@ -56,6 +57,7 @@ import { StoresComponent } from './components/stores/stores.component';
 import { SearchBarDirective } from './directives/search-bar.directive';
 import { TermsComponent } from './components/terms/terms.component';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
+import { FeatureRequestComponent } from './components/feature-request/feature-request.component';
 // import { StoreFormsComponent } from './store-forms/store-forms.component';
 // import { MarketStoreContactDetailsComponent } from './store-forms/market-store-contact-details/market-store-contact-details.component';
 // import { MarketStoreStoreDetailsComponent } from './store-forms/market-store-store-details/market-store-store-details.component';
@@ -107,6 +109,7 @@ import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-poli
     SearchBarDirective,
     TermsComponent,
     PrivacyPolicyComponent,
+    FeatureRequestComponent,
     // StoreFormsComponent,
     // MarketStoreContactDetailsComponent,
     // MarketStoreStoreDetailsComponent
@@ -116,6 +119,7 @@ import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-poli
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    MatPaginatorModule,
     FormsModule,
     ReactiveFormsModule,
     TextMaskModule,

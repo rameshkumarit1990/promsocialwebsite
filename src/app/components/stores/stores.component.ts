@@ -10,37 +10,43 @@ export class StoresComponent {
   public Stores = [
     {
       storeCoverImage: '../../../assets/images/exampleimages/flowers.jpg',
-      store: 'Castle Couture'
+      storeName: 'Castle Couture'
     },
     {
       storeCoverImage: '../../../assets/images/exampleimages/newsfeedone.jpg',
-      store: 'Azaria'
+      storeName: 'Azaria'
 
     },
     {
       storeCoverImage: '../../../assets/images/exampleimages/NewsFeedImageFive.png',
-      store: 'Windsor'
+      storeName: 'Windsor'
 
     },
     {
       storeCoverImage: '../../../assets/images/exampleimages/NewsFeedImageFour.png',
-      store: 'The Black Tux'
+      storeName: 'The Black Tux'
 
     },
     {
       storeCoverImage: '../../../assets/images/exampleimages/flowers.jpg',
-      store: 'FragranceNet.com'
+      storeName: 'FragranceNet.com'
 
     },
     {
       storeCoverImage: '../../../assets/images/exampleimages/newsfeedone.jpg',
-      store: 'Tom James Company'
+      storeName: 'Tom James Company'
 
     },
 
   ]
-
+  store = this.Stores
   constructor() { }
+
+  applyFilter(event: Event) {
+    let blogs = this.store;
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.Stores = blogs.filter(item => item.storeName.trim().toLowerCase().indexOf(filterValue) !== -1);
+  }
 
   // ngOnInit(): void {
   // }

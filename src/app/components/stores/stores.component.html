@@ -1,4 +1,4 @@
-<div style="display: flex;flex-wrap: wrap;justify-content: center;">
+<!-- <div style="display: flex;flex-wrap: wrap;justify-content: center;">
     <mat-card style="width: 28%;margin-bottom: 15px;margin-right: 10px;" *ngFor="let store of Stores">
         <div style="width: 100%;height: 250px;overflow: hidden;">
             <img style="width: 100%;min-height: 100%;" src="{{ store.storeCoverImage}}">
@@ -9,4 +9,42 @@
             <button mat-raised-button color="warn">Delete</button>
         </div>
     </mat-card>
+</div> -->
+
+<div style="height: 100vh;overflow: auto">
+    <div class="blog-cover-image">
+        <div style="position: relative; " class="mb-5">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <img class="blog-logo ml-3 mt-4" src="../../../assets/images/desktopimages/logo.png">
+                </div>
+                <div class="m-5 d-flex" style="width: 22%;">
+                    <mat-form-field style="width: 100%;" class="blog-input">
+                        <input matInput placeholder="Search" autocomplete="off" (keyup)="applyFilter($event)">
+                        <button mat-icon-button matSuffix>
+                            <mat-icon>search</mat-icon>
+                        </button>
+                    </mat-form-field>
+                </div>
+            </div>
+            <!-- <div class="blog-logo-title mt-3 fade-animation" style="color: #fff;">
+                PROM Updates for amazing prom Experience<br>
+                <span style="font-size: 20px;">...especially for you</span>
+            </div> -->
+        </div>
+        <div class="d-flex align-content-start flex-wrap justify-content-center">
+            <mat-card class="mx-2 my-4 p-4 box-shadow blog" style="width: 25rem;" *ngFor="let store of Stores">
+                <div class="mb-4" style="width: 100%;height: 250px;overflow: hidden;">
+                    <img style="width: 100%;min-height: 100%;" src="{{store.storeCoverImage}}">
+                </div>
+                <mat-card-content>
+                    <div class="blog_card-title" style="font-size: 18px;text-align: center;">{{ store.storeName}}</div>
+                </mat-card-content>
+                <div style="display: flex;justify-content: space-between;">
+                    <button mat-raised-button color="primary">Edit</button>
+                    <button mat-raised-button color="warn">Delete</button>
+                </div>
+            </mat-card>
+        </div>
+    </div>
 </div>

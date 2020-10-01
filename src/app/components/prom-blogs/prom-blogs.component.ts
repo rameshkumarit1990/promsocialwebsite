@@ -25,7 +25,7 @@ export class PromBlogsComponent {
   }, {
     id: '4',
     image: '../../../assets/images/exampleimages/NewsFeedImageFive.png',
-    title: 'The Best Makeup Looks From Spring 2019 Runways',
+    title: 'Top features of Promsocial',
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ea provident est qui similique neque nobis tempore ab, at sequi aut repellendus fuga'
   }, {
     id: '5',
@@ -35,11 +35,20 @@ export class PromBlogsComponent {
   }, {
     id: '6',
     image: '../../../assets/images/exampleimages/flowers.jpg',
-    title: 'How to use VirtualProm',
+    title: 'New Feature Request is latest feature of Promsocial',
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ea provident est qui similique neque nobis tempore ab, at sequi aut repellendus fuga'
   }];
 
+  promsocialBlogs = this.promsocialBlog;
+  emptyFilterData: boolean;
+
   constructor() { }
+
+  applyFilter(event: Event) {
+    let blogs = this.promsocialBlogs;
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.promsocialBlog = blogs.filter(item => item.title.trim().toLowerCase().indexOf(filterValue) !== -1);
+  }
 
   // ngOnInit(): void {
   // }

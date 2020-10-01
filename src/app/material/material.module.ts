@@ -16,6 +16,11 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+// import { MatPaginator } from '@angular/material/paginator';
+import { MatPaginatorModule } from '@angular/material/paginator';
+// import { MatSort } from '@angular/material/sort';
 
 const MaterialComponents = [
   MatStepperModule,
@@ -34,7 +39,12 @@ const MaterialComponents = [
   MatCheckboxModule,
   MatDividerModule,
   MatMenuModule,
-  MatExpansionModule
+  MatExpansionModule,
+  MatTableModule,
+  MatSortModule,
+  MatPaginatorModule
+  // MatPaginator,
+  // MatSort
 ];
 
 @NgModule({

@@ -13,7 +13,7 @@ p {
 }
 
 .blog-logo {
-    height            : 80px;
+    height: 80px;
     // width          : 140px;
     // display     : block;
     // margin-left : auto;
@@ -22,29 +22,36 @@ p {
 }
 
 .blog-logo-title {
-    text-align   : center;
-    font-size    : 40px;
-    margin-top   : auto;
+    text-align: center;
+    font-size: 40px;
+    margin-top: auto;
     margin-bottom: auto;
 }
 
-.blog{
+.blog {
     transition: transform .3s;
+
     &_card-image {
-        height         : 200px;
-        width          : 100%;
-        object-fit     : cover;
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
         object-position: center;
     }
+
     &_card-title {
         font-family: GothamMedium;
-        font-size  : 23px;
+        font-size: 23px;
         line-height: 28px;
-        color      : black;
+        color: black;
     }
-    &:hover{
+
+    &:hover {
         transform: translateZ(-1.5rem) scale(1.03);
 
     }
 
 }
+
+// mat-form-field-flex{
+//     background: #fff!important;
+// }

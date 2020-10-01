@@ -3,48 +3,53 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-blogs-page',
   templateUrl: './blogs-page.component.html',
-  styleUrls: ['./blogs-page.component.scss']
+  styleUrls: ['../prom-blogs/prom-blogs.component.scss']
 })
 export class BlogsPageComponent implements OnInit {
 
   public submittedBlogs = [
     {
       coverTitleImage: '../../../assets/images/exampleimages/flowers.jpg',
-      coverTitle: 'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore '
+      coverTitle: 'Best consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore '
     },
     {
       coverTitleImage: '../../../assets/images/exampleimages/newsfeedone.jpg',
-      coverTitle: 'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore '
+      coverTitle: 'Top consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore '
 
     },
     {
       coverTitleImage: '../../../assets/images/exampleimages/NewsFeedImageFive.png',
-      coverTitle: 'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore '
+      coverTitle: 'Five consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore '
 
     },
     {
       coverTitleImage: '../../../assets/images/exampleimages/NewsFeedImageFour.png',
-      coverTitle: 'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore '
+      coverTitle: 'Below consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore '
 
     },
     {
       coverTitleImage: '../../../assets/images/exampleimages/flowers.jpg',
-      coverTitle: 'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore '
+      coverTitle: 'Beautiful consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore '
 
     },
     {
       coverTitleImage: '../../../assets/images/exampleimages/newsfeedone.jpg',
-      coverTitle: 'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore '
+      coverTitle: 'Top tips consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore '
 
     },
 
   ]
 
 
-
+  submittedBlog = this.submittedBlogs;
 
   constructor() { }
 
+  applyFilter(event: Event) {
+    let blogs = this.submittedBlog;
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.submittedBlogs = blogs.filter(item => item.coverTitle.trim().toLowerCase().indexOf(filterValue) !== -1);
+  }
   ngOnInit(): void {
   }
 

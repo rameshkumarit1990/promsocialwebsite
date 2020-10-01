@@ -17,6 +17,8 @@ import { AddStoreComponent } from './components/add-store/add-store.component';
 import { MenuContentComponent } from './components/menu-content/menu-content.component';
 import { BlogViewComponent } from './components/blog-view/blog-view.component';
 import { StoresComponent } from './components/stores/stores.component';
+import { FeatureRequestComponent } from './components/feature-request/feature-request.component';
+
 // import { AddMarketStoreComponent } from './components/add-market-store/add-market-store.component';
 // import { CardsViewComponent } from './components/cards-view/cards-view.component';
 
@@ -49,6 +51,8 @@ const routes: Routes = [
       { path: 'blogs', component: BlogsPageComponent },
       { path: 'addStore', component: AddStoreComponent },
       { path: 'stores', component: StoresComponent },
+      { path: 'featureRequest', component: FeatureRequestComponent },
+
       // { path: 'storeForms', component: MarketStoreFormsComponent },
       { path: '', redirectTo: 'home', pathMatch: 'full' },
     ]
