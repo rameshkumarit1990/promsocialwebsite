@@ -26,6 +26,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 export class FeatureRequestComponent {
 
   editable = false;
+  isAscending = false;
   columnsToDisplay = ['Title', 'Username', 'Status', 'Score'];
   expandedElement: PeriodicElement | null;
 
@@ -61,6 +62,43 @@ export class FeatureRequestComponent {
   edit() {
     this.editable = true;
   }
+
+  sortColumn(columnName: any, ascending: any, format: string) {
+    this.isAscending = !this.isAscending;
+    const data = ELEMENT_DATA;
+    const property = columnName;
+    if (format === 'number') {
+      data.sort((a, b) => {
+        const first = parseFloat(a[property] || 0);
+        const second = parseFloat(b[property] || 0);
+        return this.isAscending ? first - second : second - first;
+      });
+    }
+
+    if (format === 'string') {
+      data.sort((a, b) => {
+        const first = b[property].toLowerCase();
+        const second = a[property].toLowerCase();
+        const ascending = first > second ? -1 : 1;
+        const descending = second > first ? -1 : 1;
+        return this.isAscending ? ascending : descending;
+      });
+    }
+
+    if (format === 'date') {
+      data.sort((a, b) => {
+        const da: any = new Date(a[property]);
+        const db: any = new Date(b[property]);
+        return this.isAscending ? da - db : db - da;
+      });
+    }
+    if (data && Array.isArray(data)) {
+      this.dataSource.data = data
+      // return data;
+    }
+    return data;
+  }
+
   selectedValue(event, element: any) {
     const index = this.dataSource.filteredData.findIndex(x => x.Id === element.Id);;
     const options = {
@@ -85,7 +123,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {
     Id: 1,
     Status: 'New',
-    Title: 'Explicabo ex ut cum hic possimus laborum quos velit Eos, magnam ',
+    Title: 'Makeup Explicabo ex ut cum hic possimus laborum quos velit Eos, magnam ',
     Score: 1079,
     Username: 'Harry',
     description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem doloremque ex vitae explicabo assumenda et, fugiat quas veniam dolores ducimus voluptatem labore minima ullam quibusdam at mollitia facilis voluptates eaque.`
@@ -151,7 +189,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     Id: 9,
     Status: 'Completed',
     Title: 'Amet consectetur adipisicing elit doloremque ex vitae',
-    Score: 2984,
+    Score: 29846,
     Username: 'Amelia',
     description: `Fluorine is a chemical element with Username F and atomic number 9. It is the
         lightest halogen and exists as a highly toxic pale yellow diatomic gas at standard
@@ -160,7 +198,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     Id: 10,
     Status: 'Inprogress',
     Title: 'Rem doloremque ex vitae explicabo assumenda et',
-    Score: 21797,
+    Score: 797,
     Username: 'Victoria',
     description: `Neon is a chemical element with Username Ne and atomic number 10. It is a noble gas.
         Neon is a colorless, odorless, inert monatomic gas under standard conditions, with about
@@ -195,7 +233,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     Id: 14,
     Status: 'New',
     Title: 'Sit amet consectetur adipisicing elit Rem doloremque ex vitae',
-    Score: 19994,
+    Score: 1994,
     Username: 'Ariana',
     description: `Oxygen is a chemical element with Username O and atomic number 8. It is a member of
          the chalcogen group on the periodic table, a highly reactive nonmetal, and an oxidizing
@@ -212,7 +250,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   }, {
     Id: 16,
     Status: 'Inprogress',
-    Title: 'Rem doloremque ex vitae explicabo assumenda et',
+    Title: 'Doloremque ex vitae explicabo assumenda et',
     Score: 21797,
     Username: 'Glory',
     description: `Neon is a chemical element with Username Ne and atomic number 10. It is a noble gas.
@@ -222,7 +260,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     Id: 17,
     Status: 'Inprogress',
     Title: 'Rem doloremque ex vitae explicabo assumenda et',
-    Score: 21797,
+    Score: 21798,
     Username: 'Victoria',
     description: `Neon is a chemical element with Username Ne and atomic number 10. It is a noble gas.
         Neon is a colorless, odorless, inert monatomic gas under standard conditions, with about

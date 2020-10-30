@@ -11,7 +11,7 @@
     </mat-card>
 </div> -->
 
-<div style="height: 100vh;overflow: auto">
+<!-- <div style="height: 100vh;overflow: auto">
     <div class="blog-cover-image">
         <div style="position: relative; " class="mb-5">
             <div class="d-flex justify-content-between">
@@ -27,10 +27,10 @@
                     </mat-form-field>
                 </div>
             </div>
-            <!-- <div class="blog-logo-title mt-3 fade-animation" style="color: #fff;">
+            <div class="blog-logo-title mt-3 fade-animation" style="color: #fff;">
                 PROM Updates for amazing prom Experience<br>
                 <span style="font-size: 20px;">...especially for you</span>
-            </div> -->
+            </div>
         </div>
         <div class="d-flex align-content-start flex-wrap justify-content-center">
             <mat-card class="mx-2 my-4 p-4 box-shadow blog" style="width: 25rem;" *ngFor="let store of Stores">
@@ -47,4 +47,86 @@
             </mat-card>
         </div>
     </div>
+</div> -->
+<div class="d-flex justify-content-between">
+    <mat-form-field style="width: 280px;">
+        <mat-label>Category</mat-label>
+        <mat-select>
+            <mat-option value="dresses">Dresses</mat-option>
+            <mat-option value="suits & tuxedos">Suits & Tuxedos</mat-option>
+            <mat-option value="shoes">Shoes</mat-option>
+            <mat-option value="accesories">Accesories</mat-option>
+            <mat-option value="flowers">Flowers</mat-option>
+            <mat-option value="fragnances">Fragnances</mat-option>
+            <mat-option value="hair">Hair</mat-option>
+            <mat-option value="makeup">Makeup</mat-option>
+            <mat-option value="nails">Nails</mat-option>
+            <mat-option value="jewellery">Jewellery</mat-option>
+            <mat-option value="skincare">Skincare</mat-option>
+            <mat-option value="tanning">Tanning</mat-option>
+            <mat-option value="teethwhitening">Teeth Whitening</mat-option>
+            <mat-option value="hairremoval">Hair Removal</mat-option>
+            <mat-option value="limos">Limos</mat-option>
+            <mat-option value="cars">Cars</mat-option>
+            <mat-option value="party buses">Party Buses</mat-option>
+            <mat-option value="after parties">After Parties</mat-option>
+            <mat-option value="themes">Themes</mat-option>
+            <mat-option value="photography">Photography</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field style="width: 280px;">
+        <input matInput (keyup)="applyFilter($event)" placeholder="Search" #input autocomplete="off">
+    </mat-form-field>
+</div>
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
+        <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay; let i = index">
+            <th mat-header-cell *matHeaderCellDef>
+                <div style="cursor: pointer;display: flex;" (click)="sortColumn(column, true, 'number')">
+                    {{column}}
+                    <mat-icon *ngIf="isAscending && i>0" style="font-size: 19px;">
+                        keyboard_arrow_up</mat-icon>
+                    <mat-icon *ngIf="!isAscending && i>0" style="font-size: 19px;">
+                        keyboard_arrow_down</mat-icon>
+                </div>
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element[column]}}
+            </td>
+        </ng-container>
+
+        <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
+        <ng-container matColumnDef="expandedDetail">
+            <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
+                <div class="example-element-detail"
+                    [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+                    <div class="example-element-description">
+                        <h4 style="opacity: 0.6;">Address</h4>
+                        {{element.Address}}
+                        <br>
+                        <br>
+                        <div class="d-flex">
+                            <button mat-fab color="primary" class="mr-3" style="height: 35px;width: 35px;">
+                                <mat-icon style="height: 20px;width: 20px;font-size: 20px;line-height: 0;">edit
+                                </mat-icon>
+                            </button>
+                            <button mat-fab color="warn" style="height: 35px;width: 35px;">
+                                <mat-icon style="height: 20px;width: 20px;font-size: 20px;line-height: 0;">delete
+                                </mat-icon>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+        <tr mat-row *matRowDef="let element; columns: columnsToDisplay;" class="example-element-row"
+            [class.example-expanded-row]="expandedElement === element"
+            (click)="expandedElement = expandedElement === element ? null : element">
+        </tr>
+        <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10]" showFirstLastButtons></mat-paginator>
 </div>
