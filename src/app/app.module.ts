@@ -58,6 +58,10 @@ import { SearchBarDirective } from './directives/search-bar.directive';
 import { TermsComponent } from './components/terms/terms.component';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 import { FeatureRequestComponent } from './components/feature-request/feature-request.component';
+import { ScrollAnimationsComponent } from './components/scroll-animations/scroll-animations.component';
+
+// import { FeatureSlidesLeftComponent } from './components/feature-slides-left/feature-slides-left.component';
+// import { FeatureSlidesRightComponent } from './components/feature-slides-right/feature-slides-right.component';
 // import { StoreFormsComponent } from './store-forms/store-forms.component';
 // import { MarketStoreContactDetailsComponent } from './store-forms/market-store-contact-details/market-store-contact-details.component';
 // import { MarketStoreStoreDetailsComponent } from './store-forms/market-store-store-details/market-store-store-details.component';
@@ -110,6 +114,9 @@ import { FeatureRequestComponent } from './components/feature-request/feature-re
     TermsComponent,
     PrivacyPolicyComponent,
     FeatureRequestComponent,
+    ScrollAnimationsComponent
+    // FeatureSlidesLeftComponent,
+    // FeatureSlidesRightComponent,
     // StoreFormsComponent,
     // MarketStoreContactDetailsComponent,
     // MarketStoreStoreDetailsComponent

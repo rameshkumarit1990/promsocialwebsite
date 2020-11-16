@@ -41,18 +41,20 @@
 
   <!-- second-slide-view -->
   <div class="container-fluid">
-    <div class="second-slide-title m-5 ">What you can do with PromSocial</div>
+    <div class="secondSlideTitle m-5 ">What you can do with
+      PromSocial
+    </div>
     <div class="row " style="margin-bottom: 150px;">
       <div class="col-4" [ngClass]="{'offset-2': i==0 || i==2 || i==4, 'border-bottom': i<4 }"
         *ngFor="let content of desktopView;  let i = index">
         <div class="row">
           <div class="col-6 border-right pt-4">
-            <img class="second-slide-images" src="{{content.leftIcon}}" alt="image">
+            <img class="second-slide-images " src="{{content.leftIcon}}" alt="image">
             <p class="second-slide-large-text">{{content.leftLargetext}}</p>
             <p class="second-slide-small-text">{{content.leftSmalltext}}</p>
           </div>
           <div class="col-6 border-right pt-4">
-            <img class="second-slide-images" src="{{content.rightIcon}}" alt="image">
+            <img class="second-slide-images " src="{{content.rightIcon}}" alt="image">
             <p class="second-slide-large-text">{{content.rightLargetext}}</p>
             <p class="second-slide-small-text">{{content.rightSmalltext}}</p>
           </div>
@@ -61,13 +63,12 @@
     </div>
   </div>
 
-
-  <div class="container-fluid" *ngFor="let content of desktopView;  let i = index">
+  <div class="container-fluid" *ngFor="let content of desktopView; let i = index">
     <!--left- slide-view -->
-    <div class="row slide-view " style="background-image: url({{content.leftBackgroundurl}});">
-      <div class="col-3 offset-1 my-auto ">
-        <img src="{{content.leftMobileimage}}" alt="Image" class="image-responsive mobile-image" />
-      </div>
+    <div class="row slide-view" style="background-image: url({{content.leftBackgroundurl}});">
+      <app-scroll-animations class="isInvisible col-3 offset-1 my-auto">
+        <img src="{{content.leftMobileimage}}" alt="Image" class=" image-responsive mobile-image" />
+      </app-scroll-animations>
       <div class="col-6 my-auto pb-5">
         <img src="{{content.leftIcon}}" alt="Image" class="image-responsive left-icon-image" />
         <div class="large-text">
@@ -98,9 +99,9 @@
             Blog</button> -->
         </div>
       </div>
-      <div class="col-3 offset-1  my-auto ">
+      <app-scroll-animations class="isInvisible col-3 offset-1  my-auto ">
         <img src="{{content.rightMobileimage}}" alt="Image" class="image-responsive mobile-image" />
-      </div>
+      </app-scroll-animations>
 
     </div>
   </div>
